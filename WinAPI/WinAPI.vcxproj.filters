@@ -13,24 +13,156 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="2D FrameWork">
+      <UniqueIdentifier>{9cd6401b-4957-426d-8c13-7f7b179d77c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="2D FrameWork\Utility">
+      <UniqueIdentifier>{ac066cee-c58e-4990-9281-418bc66bbe96}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="2D FrameWork\Utility\Math">
+      <UniqueIdentifier>{25b2ce01-a97a-46c8-b718-beb7ad847ba2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="2D FrameWork\PCH">
+      <UniqueIdentifier>{11c342b8-88a4-46c4-af89-87ad26b6b6f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="2D FrameWork\DesignPattern">
+      <UniqueIdentifier>{9342a4a7-0695-4af4-9654-25b69a648dae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="2D FrameWork\DesignPattern\Singleton">
+      <UniqueIdentifier>{1b49073d-9736-4d46-b3b9-a95c4732ddc8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="2D FrameWork\GameCore">
+      <UniqueIdentifier>{96d5becd-daeb-4988-95c0-e441927c961b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="2D FrameWork\ManagerClass">
+      <UniqueIdentifier>{7d56a630-9a80-46bc-93a6-1d37ed32418c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="2D FrameWork\FrameWorkManager">
+      <UniqueIdentifier>{3c822ed3-35d8-4598-a323-e260698f57f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="2D FrameWork\ManagerClass\230620수업">
+      <UniqueIdentifier>{37ab595f-bef3-4c18-9382-a8e1a2ff9d7d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="2D FrameWork\ManagerClass\230621수">
+      <UniqueIdentifier>{3e9e27fa-0575-470b-ae7e-3d6109a43022}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="2D FrameWork\ManagerClass\230626수업">
+      <UniqueIdentifier>{11cf5b66-6100-4c63-b6d6-b4b00c84668e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="2D FrameWork\GImage">
+      <UniqueIdentifier>{0df063a2-5cad-41b0-bbf9-0b5a6305f41e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="stdafx.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="targetver.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
     <ClInclude Include="Resource.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="WinAPI.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="C3DVector.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="C3DMatrix.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Stdafx.h">
+      <Filter>2D FrameWork\PCH</Filter>
+    </ClInclude>
+    <ClInclude Include="CommonMacroFunction.h">
+      <Filter>2D FrameWork\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="SingletonBase.h">
+      <Filter>2D FrameWork\DesignPattern\Singleton</Filter>
+    </ClInclude>
+    <ClInclude Include="RandomFunction.h">
+      <Filter>2D FrameWork\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="GameNode.h">
+      <Filter>2D FrameWork\GameCore</Filter>
+    </ClInclude>
+    <ClInclude Include="IWindowsMessageHandler.h">
+      <Filter>2D FrameWork\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="MainGame.h">
+      <Filter>2D FrameWork\ManagerClass</Filter>
+    </ClInclude>
+    <ClInclude Include="KeyManager.h">
+      <Filter>2D FrameWork\FrameWorkManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Example_Mole.h">
+      <Filter>2D FrameWork\ManagerClass</Filter>
+    </ClInclude>
+    <ClInclude Include="MainGame1.h">
+      <Filter>2D FrameWork\ManagerClass\230620수업</Filter>
+    </ClInclude>
+    <ClInclude Include="MainGame2.h">
+      <Filter>2D FrameWork\ManagerClass\230621수</Filter>
+    </ClInclude>
+    <ClInclude Include="GImage.h">
+      <Filter>2D FrameWork\GImage</Filter>
+    </ClInclude>
+    <ClInclude Include="MainGame3.h">
+      <Filter>2D FrameWork\ManagerClass\230626수업</Filter>
+    </ClInclude>
+    <ClInclude Include="MainGame4.h">
+      <Filter>2D FrameWork\ManagerClass\230626수업</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageManager.h">
+      <Filter>2D FrameWork\FrameWorkManager</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="WinAPI.cpp">
       <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Stdafx.cpp">
+      <Filter>2D FrameWork\PCH</Filter>
+    </ClCompile>
+    <ClCompile Include="C3DVector.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="C3DMatrix.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="WinAPI_23_06_14.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="GameNode.cpp">
+      <Filter>2D FrameWork\GameCore</Filter>
+    </ClCompile>
+    <ClCompile Include="IWindowsMessageHandler.cpp">
+      <Filter>2D FrameWork\Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="MainGame.cpp">
+      <Filter>2D FrameWork\ManagerClass</Filter>
+    </ClCompile>
+    <ClCompile Include="KeyManager.cpp">
+      <Filter>2D FrameWork\FrameWorkManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Example_Mole.cpp">
+      <Filter>2D FrameWork\ManagerClass</Filter>
+    </ClCompile>
+    <ClCompile Include="MainGame1.cpp">
+      <Filter>2D FrameWork\ManagerClass\230620수업</Filter>
+    </ClCompile>
+    <ClCompile Include="MainGame2.cpp">
+      <Filter>2D FrameWork\ManagerClass\230621수</Filter>
+    </ClCompile>
+    <ClCompile Include="GImage.cpp">
+      <Filter>2D FrameWork\GImage</Filter>
+    </ClCompile>
+    <ClCompile Include="MainGame3.cpp">
+      <Filter>2D FrameWork\ManagerClass\230626수업</Filter>
+    </ClCompile>
+    <ClCompile Include="MainGame4.cpp">
+      <Filter>2D FrameWork\ManagerClass\230626수업</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageManager.cpp">
+      <Filter>2D FrameWork\FrameWorkManager</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -45,5 +177,10 @@
     <Image Include="WinAPI.ico">
       <Filter>리소스 파일</Filter>
     </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="TrigonoMetric Function\TrigonoMetric Function.txt">
+      <Filter>2D FrameWork\ManagerClass\230621수</Filter>
+    </Text>
   </ItemGroup>
 </Project>

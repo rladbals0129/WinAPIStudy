@@ -1,21 +1,172 @@
-ï»¿// stdafx.h : ìžì£¼ ì‚¬ìš©í•˜ì§€ë§Œ ìžì£¼ ë³€ê²½ë˜ì§€ëŠ” ì•ŠëŠ”
-// í‘œì¤€ ì‹œìŠ¤í…œ í¬í•¨ íŒŒì¼ ë˜ëŠ” í”„ë¡œì íŠ¸ íŠ¹ì • í¬í•¨ íŒŒì¼ì´ ë“¤ì–´ ìžˆëŠ”
-// í¬í•¨ íŒŒì¼ìž…ë‹ˆë‹¤.
-//
-
 #pragma once
+//°æ°í ¹«½Ã
+#pragma warning(disable : 4005)
+// 4005: DXGI µî ±×·¡ÇÈ ÀÎÅÍÆäÀÌ½º¿¡¼­ ¸ÅÅ©·Î °ü·ÃÇÏ¿© Ãâ·ÂµÇ´Â °æ°í
+
+/*
+¢º Stdafx
+
+- MSÀÇ ºñÁÖ¾ó ½ºÆ©µð¿Ã¸£ ÀÌ¿ëÇÏ¿© ÇÁ·ÎÁ§Æ®¸¦ ¸¸µé¸é »ý¼ºµÇ´Â Å¬·¹½ºÀÌ´Ù
+	¤¤ ÀÌ Ä£±¸°¡ ÀÇ¹ÌÇÏ´Â ¹Ù´Â Ç¥ÁØ ¾îÇÃ¸®ÄÉÀÌ¼Ç ÇÁ·¹ÀÓ ¿öÅ©ÀÇ Åø
+
+- ¸¶¼Ò¿¡¼­ °³¹ßÀÚµéÀÇ ´É·ü Çâ»óÀ» À§ÇØ ¸¸µé¾îµÐ PCHÆÄÀÏ
+	¤¤ ÀÚÁÖ ¾²ÀÌ´Â ¿©·¯°¡Áö Çì´õµéÀº ¹Ì¸® ÄÄÆÄÀÏÇØµÎ¾î ÀÌÈÄ ´Ù½Ã ÄÄÆÄÀÏ ÇÏÁö ¾Ê°í »ç¿ëÇÏ°Ô µÈ´Ù.
+
+- °³¹ßÀÇ ÃÊ±â ±¸Ãà´Ü°è¿¡¼­´Â º° ÇÊ¿ä¼ºÀ» ¸ø´À³¢Áö¸¸ Çì´õÆÄÀÏÀÇ Å©±â°¡ Ä¿Áö°Å³ª ¾çÀÌ ¸¹¾ÆÁú¼ö·Ï
+È°¿ëµµ ¹× È¿À²ÀÌ ±Þ»ó½ÂÇÑ´Ù.
+
+
+*/
+
+//SDKDDKVER.h ´Â ÇÁ·Î±×·¥¿¡¼­ Áö¿øÇÒ os¿¡ µû¶ó or ¶óÀÌºê·¯¸®¿¡ µû¶ó Windows Çì´õ¿¡¼­
+//ÄÚµå¿¡ Æ÷Çèµµ¸® ÇÔ¼ö/»ó¼ö µîÀ» Á¦¾îÇÏ´Âµ¥ »ç¿ë ÇÑ´Ù.
+#include <SDKDDKVER.h>
 
 #include "targetver.h"
 
-#define WIN32_LEAN_AND_MEAN             // ê±°ì˜ ì‚¬ìš©ë˜ì§€ ì•ŠëŠ” ë‚´ìš©ì„ Windows í—¤ë”ì—ì„œ ì œì™¸í•©ë‹ˆë‹¤.
-// Windows í—¤ë” íŒŒì¼
-#include <windows.h>
+//#include <ole2.h>
+// GDI+ ¸¦ »ç¿ëÇÏ·Á¸é Çì´õÆÄÀÏ¿¡¼­ ²¨³»¿Í¾ß ÇÑ´Ù.
+#define WIN32_LEAN_AND_MEAN
 
-// C ëŸ°íƒ€ìž„ í—¤ë” íŒŒì¼ìž…ë‹ˆë‹¤.
-#include <stdlib.h>
-#include <malloc.h>
-#include <memory.h>
-#include <tchar.h>
+//ÄÜ¼ÖÃ¢
+#pragma comment(linker,"/entry:WinMainCRTStartup /subsystem:console")  //?
+//¶óÀÌºê·¯¸® Ãß°¡
+#pragma comment (lib,"msimg32.lib")
+
+#include <Windows.h>
+
+//! C·±Å¸ÀÓ Çì´õÆÄÀÏ
+#include <stdlib.h> // C¾ð¾î Ç¥ÁØ ¶óÀÌºê·¯¸® ÇÔ¼ö
+#include <malloc.h>// C¾ð¾î¿¡¼­ ¸Þ¸ð¸® ÇÒ´çÇÒ¶§ »ç¿ëÇÑ´Ù
+#include <memory.h> // ¸Þ¸ð¸® °ü·Ã Çì´õÆÄÀÏ memset,memcpy(windowsÇì´õ¿¡ Æ÷ÇÔµÊ(°³Á¤À»ÅëÇØ¼­))
+#include <tchar.h> //
+#include <time.h>
+
+/*
+¢º¹®ÀÚ¿­ ¼Â
+
+- À©µµ¿ì¿¡¼­ »ç¿ëÇÒ ¹®ÀÚ¿­ Ãâ·Â ÆÄÀÏ(¹®ÀÚ) ¼Â(TextOut, DrawText, wsprinf µîµî)
+¤¤ ±âº»ÀûÀ¸·Î À¯´ÏÄÚµå±â¹Ý
+
+MBCS (¸ÖÆ¼¹ÙÀÌÆ® Ä³¸¯ÅÍ ¼Â)
+
+- ±âÁ¸¿¡ »ç¿ëÇÏ´ø ¸ÖÆ¼¹ÙÀÌÆ® ÇüÅÂÀÇ ¹®ÀÚ¿­À» ¶æÇÑ´Ù
+- ¸ÖÆ¼¹ÙÀÌÆ® ÄÚµå´Â ¿µ¾î°°Àº ¾Æ½ºÅ° ÄÚµå¿¡ Æ÷ÇèµÇ´Â ¹®ÀÚ´Â 1¹ÙÀÌÆ®·Î Ç¥±âÇÏ°í
+  Æ÷ÇÔµÇÁö ¾Ê´Â ¹®ÀÚ´Â 2¹ÙÀÌÆ®·Î Ã¶ÇÑ´Ù
+
+WBCS (¿ÍÀÌµå ¹ÙÀÌÆ® Ä³¸¯ÅÍ ¼Â)
+
+- ¸ðµç ¹®ÀÚ¸¦ 2¹ÙÀÌÆ®·Î Ã³¸®ÇÏ¸ç À¯´ÏÄÚµå ±â¹ÝÀÌ´Ù
+
+¢º À¯´ÏÄÚµå¿Í ¸ÖÆ¼¹ÙÀÌÆ®ÀÇ »ç¿ë
+
+- VS¿¡¼­´Â °³¹ß½Ã ¸ÖÆ¼¹ÙÀÌÆ® / À¯´ÏÄÚµå ¹»¾µÁö ±âº»ÀûÀ¸·Î ÁöÁ¤À» ÇØÁà¾ß ÇÑ´Ù.
+
+- À¯´ÏÄÚµåÀÎ °æ¿ì¿¡´Â ¹®ÀÚ¿­À» ""·Î °¨½Î°í ±× ¾Õ¿¡ LÀ» ºÙÇô¼­ (L"")ÀÌ¶ó°í Ç¥±âÇÑ´Ù
+
+- ¸ÖÆ¼¹ÙÀÌÆ® °°Àº °Ï¿ì¿¡´Â ±×³É ""¸¸ »ç¿ëÇÏ¸é µÈ´Ù.
+
+- À¯´ÏÄÚµå·Î °³¹ßµÈ ÇÁ·Î±×·¥À» ¸ÖÆ¼¹ÙÀÌÆ®·Î ÀÌ½ÄÇÏ·Á¸é
+ÀÌµé ¹®ÀÚ¿­ÀÇ Ç¥Çö¹æ½ÄÀ» ´Ù½Ã °íÃÄÁà¾ß ÇÏ±â¶§¹®¿¡ ¸Å¿ì ºÒÆíÇÏ´Ù.
+¤¤ ±×·¡¼­ _T ¸ÅÅ©·Î¸¦ »ç¿ëÇØ¾ß ÇÑ´Ù.
+
+- ¹®ÀÚ¿­À» µû¿ÈÇ¥·Î °¨½Î°í À¯´ÏÄÚµå¿¡¼­ »ç¿ëÇÑ "L"´ë½Å "_T"¸¦ »ç¿ëÇÏ¸é
+¸ÅÅ©·Î°¡ ¾Ë¾Æ¼­ °³¹ß È¯°æ¿¡ ¸Â°Ô Ä¡È¯ÇØÁØ´Ù.
+
+*/
+#include <stdio.h> //Ç¥ÁØ ÀÔÃâ·Â Çì´õÆÄÀÏ
 
 
-// ì—¬ê¸°ì„œ í”„ë¡œê·¸ëž¨ì— í•„ìš”í•œ ì¶”ê°€ í—¤ë”ë¥¼ ì°¸ì¡°í•©ë‹ˆë‹¤.
+//! C++·±Å¸ÀÓ Çì´õ ÆÄÀÏ
+#include <iostream>
+/*
+chrono
+- c++11¿¡¼­ Ãß°¡µÈ ½Ã°£ °ü·Ã ¶óÀÌºê·¯¸®(STL)
+¤¤ ±âÁ¸ c·±Å¸ÀÓ¿¡¼­ Á¦°øÇÏ´Â timeÇÔ¼öº¸´Ù ´Ù¾çÇÑ / È®ÀåµÈ ±â´ÉÀ» Áö¿øÇÑ´Ù.
+¤¤ ÀåÁ¡: Á¤¹Ðµµ°¡ ³ô´Ù.(³ª³ë ¹Ð¸® ÃÊ ´ÜÀ§)
+	¤¤ timeÇÔ¼ö´Â ÃÊ´ÜÀ§ °ª¸¸ ÃøÁ¤ÀÌ °¡´ÉÇÏ±â ‹š¹®¿¡ Á¤¸»µµ°¡ ¶³¾îÁú ¼ö¹Û¿¡ ¾ø´Ù
+¤¤ OS¿Í µ¶¸³ÀûÀ¸·Î µ¿ÀÛÀ» ÇÑ´Ù.
+*/
+#include <chrono>
+#include <random>
+#include <vector>
+#include <map>
+#include <unordered_map> //Hash ÀÚ·á±¸Á¶
+//¤¤ ÀÏ¹ÝÀû »óÈ²¿¡¼­ MAPº¸´Ù °Ë»ö ¼Óµµ°¡ ´õ ºü¸£´Ù.
+// ¤¤ ºü¸¥ ÀÌÀ¯´Â Áßº¹µÈ µ¥ÀÌÅÍ¸¦ Çã¿ëÇÏÁö ¾Ê±â ‹š¹®¿¡
+//	¤¤ ´Ü. À¯»çµ¥ÀÌÅÍ°¡ ¸¹À»½Ã(key) ÇØ½Ã Ãæµ¹ÀÌ ¹ß»ýÇÒ ¿©Áö°¡ »ý±â±â ¶§¹®¿¡ ¼º´É ÀúÇÏ°¡ ¹ß»ýÇÑ´Ù.
+#include <cassert> //c++ÇÁ·Î±×·¡¸ÓÀÇ Èñ¸Á. -> Àß ¾²¸é
+#include <bitset>// ºñÆ®¿¬»êÀ» Á» ´õ ½±°Ô °ü¸®ÇØÁÖ´Â ÇÔ¼ö¸¦ Áö¿øÇÏ´Â STL
+// ¤¤ reset(),set(),flip(),all(),any(),size() µîµî..
+using namespace std;
+/*
+//D2D/D3D Çì´õ ÆÄÀÏ
+#include <D2D1.h>
+#include <d2d1helper.h>
+#include <d3dx0.h>
+#include <D3DX11.h>
+#include <d3d11shader.h>
+#include <dinput.h>
+
+#pragma comment (lib,"d2d1.lib")
+#pragma comment (lib,"d3d9.lib")
+#pragma comment (lib,"d3dx9.lib")
+#pragma comment (lib,"d3d11.lib")
+#pragma comment (lib,"d3dx11.lib")
+#pragma comment (lib,"dinput8.lib")
+#pragma comment (lib,"dxguid.lib")
+
+ID2D1Factory* _ID2DFactory = nullptr;
+ID2D1HwndRenderTarget* _ID2DRenderTarget = nullptr;
+ */
+
+// ¡Ø »ç¿ëÀÚ Á¤ÀÇ ÇØ´õÆÄÀÏ¸í
+#include "CommonMacroFunction.h"
+#include "RandomFunction.h"
+#include "KeyManager.h"
+#include "ImageManager.h"
+// # ½Ì±ÛÅæ #
+#define RND RandomFunction::getSingleton()
+#define KEYMANAGER KeyManager::getSingleton()
+#define IMAGEMANAGER ImageManager::getSingleton()
+
+// #¸ÅÅ©·Î# (À©µµ¿ì Ã¢ ÃÊ±âÈ­)
+#define WINNAME		(LPTSTR)(TEXT("WindowsAPI"))
+#define WINSTART_X	0
+#define WINSTART_Y	0
+#define WINSIZE_X	1280
+#define WINSIZE_Y	800
+//WS_CAPTION : Å¸ÀÌÆ²¹Ù¸¦ °¡Áö±â À§ÇÑ ¿É¼Ç
+//WS_SYSMENU : Á¦¸ñ Ç¥½ÃÁÙ¿¡ ÄÁÆ®·Ñ ¸Þ´º »óÀÚ Ã¢
+#define WINSTYLE	WS_CAPTION | WS_SYSMENU
+
+//# ¸ÅÅ©·Î ÇÔ¼ö #   -> ¸ÅÅ©·ÎÇÔ¼ö´Â ÇÑÁÙ¸¸ÀÎ½Ä ÀÌ¾î°¡°í½ÍÀ¸¸é ¾Æ·¡Ã³·³ \ ¸¦ »ç¿ëÇÏÀÚ
+// (Å¬·¡½º¿¡¼­ µ¿ÀûÇÒ´çµÈ ºÎºÐ ÇØÁ¦)
+#define SAFE_DELETE(p) {if(p) { delete (p); (p) = nullptr; }}
+#define SAFE_DELETE_ARRAY(p) {if(p) { delete[] (p); (p) = nullptr; }}
+#define SAFE_RELEASE(p)	{if(p) {(p)->release(); (p) = nullptr; }}
+
+// ·¹ÀÏ½´ÅÍ / ÇÃ·¡Æ÷¸Ó / ½´ÆÃ					  /   ¸®µë    / RPG / Á¡ÇÁ  -> Æ÷Æú Àå¸£ ÃßÃµ
+//  ¤¤ ¸¶¸®¿À          ¤¤»ï°¢ÇÔ¼ö°¡ ¼÷·ÃµÇ¾î¾ßÇÔ 
+//
+
+// # Àü¿ª º¯¼ö # (µ¥ÀÌÅÍ ¿µ¿ª, ÇÁ·ÎÀèÆ® ÀüÃ¼¿¡¼­ Á¢±Ù°¡´ÉÇØ¼­ ÁÖÀÇÇØ¾ßÇÔ)
+//		¤¤(ex - ÇÃ·¹ÀÌ¾î ÀÎº¥Åä¸® ÃßÃµ)
+//static vs extern   ?? 
+// static Àº ´õÀÌ»ó Àü¿ªÀÌ ¾Æ´Ï°Ô ¹Ù²ãÁÙ¼ö ÀÖ´Ù.
+// extern Àº ÇÁ·ÎÁ§Æ®°¡ ³¡³¯‹š±îÁö °è¼Ó Àü¿ª
+// ¤¤externÅ°¿öµå´Â ´Ù¸¥Çì´õ /cpp ¿¡¼­ º¯¼ö¸¦ °øÀ¯ÇØ¼­ ¾²±â À§ÇØ »ç¿ëÇÑ´Ù
+// ¤¤°´Ã¼
+// ±âº»ÀûÀ¸·Î Àü¿ªº¯¼ö´Â externÅ°¿öµå¸¦ »ý·«ÇØµµ ±âº»ÀûÀ¸·Î externÈ­ µÇ´Â °æ¿ì°¡ ¸¹´Ù. (¸í½Ã¸¦ ÇØÁáÀ»»Ó)
+// ID2D1HwndRenderTarget* _ID2DRenderTarget = nullptr; <- ÀÌ°Å´Â ¾ÈµÈ´Ù. nullptrÀÌ ¾Æ´Ï¶ó Á¤È®È÷ ¸í½Ã¸¦ ÇØÁà¾ßÇÔ
+//	¤¤ Å¬·¡½º¸¦ ÂüÁ¶ÇÏ°íÀÖ´Â Æ÷ÀÎÅÍº¯¼ö
+
+//Àü¿ªº¯¼ö
+extern HINSTANCE _hInstance;
+extern HWND      _hWnd;
+
+extern POINT	 _ptMouse;
+// ¦¦ xÁÂÇ¥¿Í yÁÂÇ¥¸¦ Æò¸éÀÇ ÁÂÇ¥¿¡ Á¤ÀÇÇÒ‹š »ç¿ëÀ» ÇÑ´Ù. (ex ->¸¶¿ì½º Ä¿¼­ why? »óÁ¡À»°¡µç ¿É¼ÇÀ» ÄÑµç ¸¶¿ì½º´Â °è¼Ó ÀÖÀ¸´Ï±î.)
+//			¤¤Àü¿ªÀ¸·Î ¾²±â ÁÁ´Ù.
+
+
