@@ -127,6 +127,16 @@ public:
 	//===================프레임 랜더=================== 그려지는방식이 까다로워질테니 인라인함수를추가해보자
 	void frameRender(HDC hdc, int destX, int destY);
 	void frameRender(HDC hdc, int destX, int destY, int currentFrameX,int currentFrameY);
+
+	//==================루프랜더====================
+	// ㄴ 반복 / 이미지를 밀고 당기는 방식 
+	void loopRender(HDC hdc, const LPRECT drawArea, int offsetX, int offsetY); //ex) 슈팅게임 배경, 러닝게임 배경 (활용하면 카메라구현가능)
+									//그려지는 영역
+	void loopAlphaRender(HDC hdc, const LPRECT drawArea, int offsetX, int offsetY,BYTE alpha);
+
+
+
+
 	//렉트를 선행적으로 그려놓고
 
 

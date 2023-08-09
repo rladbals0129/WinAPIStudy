@@ -15,11 +15,18 @@ HRESULT GameNode::init(bool managerInit)
 
 	if (managerInit)
 	{
+		// 로케일 설정
+		//ㄴ 프로그램의 명령어가 여러가지 언어로 주어져 있는 경우 이중에 어떤 언어의 것을 
+		// 출력할것인지에 대한 설정
+		// ***** 파일불러올때 한글명있어도 읽어들일수있다.
+		setlocale(LC_ALL, "korean");
+
 		SetTimer(_hWnd, 1, 10, NULL); //타이머 초기화
 
 		RND->init();
 		KEYMANAGER->init();
 		IMAGEMANAGER->init();
+		TEMPSOUNDMANAGER->init();
 	}
 	
 	return S_OK;
@@ -28,13 +35,16 @@ HRESULT GameNode::init(bool managerInit)
 void GameNode::release(void)
 {
 	//동적할당과 같이 삭제하지 않고 종료하면 메모리줄줄줄 샌다.
-	KillTimer(_hWnd, 1);
+	
 	if(_managerInit)
 	{ 
+		KillTimer(_hWnd, 1);
+
 		RND->releaseSingleton();
 		KEYMANAGER->releaseSingleton();
 		IMAGEMANAGER->release();
 		IMAGEMANAGER->releaseSingleton();
+		TEMPSOUNDMANAGER->releaseSingleton();
 	}
 	ReleaseDC(_hWnd, _hdc);
 

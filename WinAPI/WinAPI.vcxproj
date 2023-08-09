@@ -153,6 +153,7 @@
     <ClInclude Include="Example_Mole.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClInclude>
+    <ClInclude Include="FontManager.h" />
     <ClInclude Include="GameNode.h" />
     <ClInclude Include="GImage.h" />
     <ClInclude Include="ImageManager.h" />
@@ -173,9 +174,14 @@
     <ClInclude Include="MainGame4.h" />
     <ClInclude Include="RandomFunction.h" />
     <ClInclude Include="Resource.h" />
+    <ClInclude Include="ResourceClass.h" />
+    <ClInclude Include="SecondScene.h" />
     <ClInclude Include="SingletonBase.h" />
+    <ClInclude Include="StartScene.h" />
     <ClInclude Include="Stdafx.h" />
     <ClInclude Include="targetver.h" />
+    <ClInclude Include="TempSoundManager.h" />
+    <ClInclude Include="TempSoundScene.h" />
     <ClInclude Include="WinAPI.h" />
   </ItemGroup>
   <ItemGroup>
@@ -184,6 +190,7 @@
     <ClCompile Include="Example_Mole.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="FontManager.cpp" />
     <ClCompile Include="GameNode.cpp" />
     <ClCompile Include="GImage.cpp" />
     <ClCompile Include="ImageManager.cpp" />
@@ -202,9 +209,14 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="MainGame4.cpp" />
+    <ClCompile Include="ResourceClass.cpp" />
+    <ClCompile Include="SecondScene.cpp" />
+    <ClCompile Include="StartScene.cpp" />
     <ClCompile Include="Stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="TempSoundManager.cpp" />
+    <ClCompile Include="TempSoundScene.cpp" />
     <ClCompile Include="WinAPI.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>

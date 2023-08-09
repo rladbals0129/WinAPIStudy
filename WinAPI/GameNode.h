@@ -64,7 +64,7 @@
 #pragma endregion
 //백버퍼를 정적이미지로 받음
 static GImage* _backBuffer = IMAGEMANAGER->addImage("backBuffer", WINSIZE_X, WINSIZE_Y);
-
+//씬을 바꿀수있다
 class GameNode
 {
 private:

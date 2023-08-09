@@ -88,6 +88,10 @@ public:
 	//===================프레임 랜더=================== 
 	void frameRender(string strKey, HDC hdc, int destX, int destY);
 	void frameRender(string strKey, HDC hdc, int destX, int destY, int currentFrameX, int currentFrameY);
+
+	void loopRender(string strKey, HDC hdc, const LPRECT drawArea, int offsetX, int offsetY); 
+	void loopAlphaRender(string strKey, HDC hdc, const LPRECT drawArea, int offsetX, int offsetY, BYTE alpha);
+
 	ImageManager() {}
 	~ImageManager() {}
 };

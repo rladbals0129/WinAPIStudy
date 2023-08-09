@@ -125,20 +125,47 @@ ID2D1HwndRenderTarget* _ID2DRenderTarget = nullptr;
 #include "RandomFunction.h"
 #include "KeyManager.h"
 #include "ImageManager.h"
+#include "FontManager.h"
+#include "TempSoundManager.h"
 // # 싱글톤 #
 #define RND RandomFunction::getSingleton()
 #define KEYMANAGER KeyManager::getSingleton()
 #define IMAGEMANAGER ImageManager::getSingleton()
+#define FONTMANAGER FontManager::getSingleton()
+#define TEMPSOUNDMANAGER TempSoundManager::getSingleton()
 
-// #매크로# (윈도우 창 초기화)
+//타이틀
 #define WINNAME		(LPTSTR)(TEXT("WindowsAPI"))
+
+// !전체화면
+//#define FULLSCREEN
+
+#ifdef FULLSCREEN
+
+#define WINSTART_X	0
+#define WINSTART_Y	0
+#define WINSIZE_X	GetSystemMetrics(SM_CXSCREEN) //GetSystemMetrics()인자로 전달되는 시스템 설정 정보를 반환
+#define WINSIZE_Y	GetSystemMetrics(SM_CYSCREEN) //SM_CXSCREEN ,SM_CYSCREEN 현제 화면 해상도 반환(x,y축) 
+#define WINSTYLE	WS_POPUPWINDOW | WS_MAXIMIZE
+
+#else
+
 #define WINSTART_X	0
 #define WINSTART_Y	0
 #define WINSIZE_X	1280
 #define WINSIZE_Y	800
-//WS_CAPTION : 타이틀바를 가지기 위한 옵션
-//WS_SYSMENU : 제목 표시줄에 컨트롤 메뉴 상자 창
 #define WINSTYLE	WS_CAPTION | WS_SYSMENU
+#endif
+
+// #매크로# (윈도우 창 초기화)
+//#define WINNAME		(LPTSTR)(TEXT("WindowsAPI"))
+//#define WINSTART_X	0
+//#define WINSTART_Y	0
+//#define WINSIZE_X	1280
+//#define WINSIZE_Y	800
+////WS_CAPTION : 타이틀바를 가지기 위한 옵션
+////WS_SYSMENU : 제목 표시줄에 컨트롤 메뉴 상자 창
+//#define WINSTYLE	WS_CAPTION | WS_SYSMENU
 
 //# 매크로 함수 #   -> 매크로함수는 한줄만인식 이어가고싶으면 아래처럼 \ 를 사용하자
 // (클래스에서 동적할당된 부분 해제)

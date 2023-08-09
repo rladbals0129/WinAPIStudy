@@ -52,6 +52,18 @@
     <Filter Include="2D FrameWork\GImage">
       <UniqueIdentifier>{0df063a2-5cad-41b0-bbf9-0b5a6305f41e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\씬관리">
+      <UniqueIdentifier>{8dee6009-5b4e-458c-8681-50062e63577e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\폰트매니저">
+      <UniqueIdentifier>{7857c6e2-3cc6-46e0-bd36-42d335070e7f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\리소스관리">
+      <UniqueIdentifier>{d0b348e8-4ee3-4a9f-bdeb-3ccbbb33a045}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="2D FrameWork\사운드">
+      <UniqueIdentifier>{30f19ba2-6be9-4ef1-a062-e05922a69d98}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Resource.h">
@@ -108,11 +120,29 @@
     <ClInclude Include="MainGame3.h">
       <Filter>2D FrameWork\ManagerClass\230626수업</Filter>
     </ClInclude>
-    <ClInclude Include="MainGame4.h">
-      <Filter>2D FrameWork\ManagerClass\230626수업</Filter>
-    </ClInclude>
     <ClInclude Include="ImageManager.h">
       <Filter>2D FrameWork\FrameWorkManager</Filter>
+    </ClInclude>
+    <ClInclude Include="SecondScene.h">
+      <Filter>소스 파일\씬관리</Filter>
+    </ClInclude>
+    <ClInclude Include="StartScene.h">
+      <Filter>소스 파일\씬관리</Filter>
+    </ClInclude>
+    <ClInclude Include="MainGame4.h">
+      <Filter>소스 파일\씬관리</Filter>
+    </ClInclude>
+    <ClInclude Include="FontManager.h">
+      <Filter>소스 파일\폰트매니저</Filter>
+    </ClInclude>
+    <ClInclude Include="ResourceClass.h">
+      <Filter>소스 파일\리소스관리</Filter>
+    </ClInclude>
+    <ClInclude Include="TempSoundManager.h">
+      <Filter>2D FrameWork\사운드</Filter>
+    </ClInclude>
+    <ClInclude Include="TempSoundScene.h">
+      <Filter>소스 파일</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -158,11 +188,29 @@
     <ClCompile Include="MainGame3.cpp">
       <Filter>2D FrameWork\ManagerClass\230626수업</Filter>
     </ClCompile>
-    <ClCompile Include="MainGame4.cpp">
-      <Filter>2D FrameWork\ManagerClass\230626수업</Filter>
-    </ClCompile>
     <ClCompile Include="ImageManager.cpp">
       <Filter>2D FrameWork\FrameWorkManager</Filter>
+    </ClCompile>
+    <ClCompile Include="StartScene.cpp">
+      <Filter>소스 파일\씬관리</Filter>
+    </ClCompile>
+    <ClCompile Include="SecondScene.cpp">
+      <Filter>소스 파일\씬관리</Filter>
+    </ClCompile>
+    <ClCompile Include="MainGame4.cpp">
+      <Filter>소스 파일\씬관리</Filter>
+    </ClCompile>
+    <ClCompile Include="FontManager.cpp">
+      <Filter>소스 파일\폰트매니저</Filter>
+    </ClCompile>
+    <ClCompile Include="ResourceClass.cpp">
+      <Filter>소스 파일\리소스관리</Filter>
+    </ClCompile>
+    <ClCompile Include="TempSoundManager.cpp">
+      <Filter>2D FrameWork\사운드</Filter>
+    </ClCompile>
+    <ClCompile Include="TempSoundScene.cpp">
+      <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
