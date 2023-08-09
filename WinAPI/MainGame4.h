@@ -2,6 +2,8 @@
 #include "GameNode.h"
 #include "StartScene.h"
 #include "SecondScene.h"
+#include "C3DVector.h"
+#include "C3DMatrix.h"
 //#include "ResourceClass.h"
 
 class MainGame4 : public GameNode
