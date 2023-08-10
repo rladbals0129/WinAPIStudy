@@ -1,6 +1,7 @@
 #pragma once
 #include "GameNode.h"
 #include "TempSoundScene.h"
+#include "Rocket.h"
 class SecondScene : public GameNode
 {
 private:
@@ -8,6 +9,7 @@ private:
 	int _bgSpeed; //루프용변수
 
 	TempSoundScene* _temp;
+	Rocket* _rocket;
 
 
 public:

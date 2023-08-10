@@ -4,6 +4,7 @@
 #include "SecondScene.h"
 #include "C3DVector.h"
 #include "C3DMatrix.h"
+#include "Rocket.h"
 //#include "ResourceClass.h"
 
 class MainGame4 : public GameNode
@@ -15,6 +16,7 @@ private:
 	//ResourceClass _re; //리소스를 관리해주는 클래스
 	StartScene* _start;
 	SecondScene* _second;
+	Rocket* _rocket;
 
 	GameNode* _currentScene; //손대기x
 	// ㄴ 런타임때 무언갈 바꿔주기 위해 올려둔거다.

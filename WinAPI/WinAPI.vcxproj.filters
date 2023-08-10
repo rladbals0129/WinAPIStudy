@@ -34,20 +34,8 @@
     <Filter Include="2D FrameWork\GameCore">
       <UniqueIdentifier>{96d5becd-daeb-4988-95c0-e441927c961b}</UniqueIdentifier>
     </Filter>
-    <Filter Include="2D FrameWork\ManagerClass">
-      <UniqueIdentifier>{7d56a630-9a80-46bc-93a6-1d37ed32418c}</UniqueIdentifier>
-    </Filter>
     <Filter Include="2D FrameWork\FrameWorkManager">
       <UniqueIdentifier>{3c822ed3-35d8-4598-a323-e260698f57f9}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="2D FrameWork\ManagerClass\230620수업">
-      <UniqueIdentifier>{37ab595f-bef3-4c18-9382-a8e1a2ff9d7d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="2D FrameWork\ManagerClass\230621수">
-      <UniqueIdentifier>{3e9e27fa-0575-470b-ae7e-3d6109a43022}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="2D FrameWork\ManagerClass\230626수업">
-      <UniqueIdentifier>{11cf5b66-6100-4c63-b6d6-b4b00c84668e}</UniqueIdentifier>
     </Filter>
     <Filter Include="2D FrameWork\GImage">
       <UniqueIdentifier>{0df063a2-5cad-41b0-bbf9-0b5a6305f41e}</UniqueIdentifier>
@@ -63,6 +51,21 @@
     </Filter>
     <Filter Include="2D FrameWork\사운드">
       <UniqueIdentifier>{30f19ba2-6be9-4ef1-a062-e05922a69d98}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\슈팅게임">
+      <UniqueIdentifier>{ab3e62e8-6112-4341-ad82-e5aa0ceba44a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\ManagerClass">
+      <UniqueIdentifier>{7d56a630-9a80-46bc-93a6-1d37ed32418c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\ManagerClass\230620수업">
+      <UniqueIdentifier>{37ab595f-bef3-4c18-9382-a8e1a2ff9d7d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\ManagerClass\230621수">
+      <UniqueIdentifier>{3e9e27fa-0575-470b-ae7e-3d6109a43022}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\ManagerClass\230626수업">
+      <UniqueIdentifier>{11cf5b66-6100-4c63-b6d6-b4b00c84668e}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -94,25 +97,25 @@
       <Filter>2D FrameWork\Utility</Filter>
     </ClInclude>
     <ClInclude Include="MainGame.h">
-      <Filter>2D FrameWork\ManagerClass</Filter>
+      <Filter>소스 파일\ManagerClass</Filter>
     </ClInclude>
     <ClInclude Include="KeyManager.h">
       <Filter>2D FrameWork\FrameWorkManager</Filter>
     </ClInclude>
     <ClInclude Include="Example_Mole.h">
-      <Filter>2D FrameWork\ManagerClass</Filter>
+      <Filter>소스 파일\ManagerClass</Filter>
     </ClInclude>
     <ClInclude Include="MainGame1.h">
-      <Filter>2D FrameWork\ManagerClass\230620수업</Filter>
+      <Filter>소스 파일\ManagerClass\230620수업</Filter>
     </ClInclude>
     <ClInclude Include="MainGame2.h">
-      <Filter>2D FrameWork\ManagerClass\230621수</Filter>
+      <Filter>소스 파일\ManagerClass\230621수</Filter>
     </ClInclude>
     <ClInclude Include="GImage.h">
       <Filter>2D FrameWork\GImage</Filter>
     </ClInclude>
     <ClInclude Include="MainGame3.h">
-      <Filter>2D FrameWork\ManagerClass\230626수업</Filter>
+      <Filter>소스 파일\ManagerClass\230626수업</Filter>
     </ClInclude>
     <ClInclude Include="ImageManager.h">
       <Filter>2D FrameWork\FrameWorkManager</Filter>
@@ -144,6 +147,15 @@
     <ClInclude Include="C3DVector.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="Rocket.h">
+      <Filter>소스 파일\슈팅게임</Filter>
+    </ClInclude>
+    <ClInclude Include="Flame.h">
+      <Filter>소스 파일\슈팅게임</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils.h">
+      <Filter>소스 파일\슈팅게임</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="WinAPI.cpp">
@@ -168,25 +180,25 @@
       <Filter>2D FrameWork\Utility</Filter>
     </ClCompile>
     <ClCompile Include="MainGame.cpp">
-      <Filter>2D FrameWork\ManagerClass</Filter>
+      <Filter>소스 파일\ManagerClass</Filter>
     </ClCompile>
     <ClCompile Include="KeyManager.cpp">
       <Filter>2D FrameWork\FrameWorkManager</Filter>
     </ClCompile>
     <ClCompile Include="Example_Mole.cpp">
-      <Filter>2D FrameWork\ManagerClass</Filter>
+      <Filter>소스 파일\ManagerClass</Filter>
     </ClCompile>
     <ClCompile Include="MainGame1.cpp">
-      <Filter>2D FrameWork\ManagerClass\230620수업</Filter>
+      <Filter>소스 파일\ManagerClass\230620수업</Filter>
     </ClCompile>
     <ClCompile Include="MainGame2.cpp">
-      <Filter>2D FrameWork\ManagerClass\230621수</Filter>
+      <Filter>소스 파일\ManagerClass\230621수</Filter>
     </ClCompile>
     <ClCompile Include="GImage.cpp">
       <Filter>2D FrameWork\GImage</Filter>
     </ClCompile>
     <ClCompile Include="MainGame3.cpp">
-      <Filter>2D FrameWork\ManagerClass\230626수업</Filter>
+      <Filter>소스 파일\ManagerClass\230626수업</Filter>
     </ClCompile>
     <ClCompile Include="ImageManager.cpp">
       <Filter>2D FrameWork\FrameWorkManager</Filter>
@@ -212,6 +224,15 @@
     <ClCompile Include="TempSoundScene.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="Rocket.cpp">
+      <Filter>소스 파일\슈팅게임</Filter>
+    </ClCompile>
+    <ClCompile Include="Flame.cpp">
+      <Filter>소스 파일\슈팅게임</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils.cpp">
+      <Filter>소스 파일\슈팅게임</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="WinAPI.rc">
@@ -228,7 +249,7 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="TrigonoMetric Function\TrigonoMetric Function.txt">
-      <Filter>2D FrameWork\ManagerClass\230621수</Filter>
+      <Filter>소스 파일\ManagerClass\230621수</Filter>
     </Text>
   </ItemGroup>
 </Project>

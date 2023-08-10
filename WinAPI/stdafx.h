@@ -127,6 +127,10 @@ ID2D1HwndRenderTarget* _ID2DRenderTarget = nullptr;
 #include "ImageManager.h"
 #include "FontManager.h"
 #include "TempSoundManager.h"
+#include "Utils.h"
+
+using namespace MY_UTIL;
+
 // # ΩÃ±€≈Ê #
 #define RND RandomFunction::getSingleton()
 #define KEYMANAGER KeyManager::getSingleton()
