@@ -9,6 +9,7 @@ private:
 	int _bgSpeed; //루프용변수
 
 	TempSoundScene* _temp;
+
 	Rocket* _rocket;
 
 

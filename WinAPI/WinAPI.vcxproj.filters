@@ -67,6 +67,9 @@
     <Filter Include="소스 파일\ManagerClass\230626수업">
       <UniqueIdentifier>{11cf5b66-6100-4c63-b6d6-b4b00c84668e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\슈팅게임\Player">
+      <UniqueIdentifier>{fc3a3b3c-bb67-4ced-bc31-e0d00a25d2b9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Resource.h">
@@ -147,13 +150,16 @@
     <ClInclude Include="C3DVector.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="Rocket.h">
-      <Filter>소스 파일\슈팅게임</Filter>
-    </ClInclude>
     <ClInclude Include="Flame.h">
-      <Filter>소스 파일\슈팅게임</Filter>
+      <Filter>소스 파일\슈팅게임\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Rocket.h">
+      <Filter>소스 파일\슈팅게임\Player</Filter>
     </ClInclude>
     <ClInclude Include="Utils.h">
+      <Filter>2D FrameWork\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Bullets.h">
       <Filter>소스 파일\슈팅게임</Filter>
     </ClInclude>
   </ItemGroup>
@@ -224,13 +230,16 @@
     <ClCompile Include="TempSoundScene.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="Rocket.cpp">
-      <Filter>소스 파일\슈팅게임</Filter>
-    </ClCompile>
     <ClCompile Include="Flame.cpp">
-      <Filter>소스 파일\슈팅게임</Filter>
+      <Filter>소스 파일\슈팅게임\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Rocket.cpp">
+      <Filter>소스 파일\슈팅게임\Player</Filter>
     </ClCompile>
     <ClCompile Include="Utils.cpp">
+      <Filter>2D FrameWork\Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="Bullets.cpp">
       <Filter>소스 파일\슈팅게임</Filter>
     </ClCompile>
   </ItemGroup>

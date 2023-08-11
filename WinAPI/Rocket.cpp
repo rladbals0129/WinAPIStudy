@@ -11,17 +11,23 @@ HRESULT Rocket::init(void)
 
 	//  ↓하지만 이렇게 바뀌면?
 	_image = IMAGEMANAGER->addImage("로켓", "Resources/Images/Object/Rocket.bmp", 52, 64, true, RGB(255, 0, 255));
-
+	_rc = RectMakeCenter(_x, _y, _image->getWidth(), _image->getHeight());
 	//그냥 보면 모르겠지만 확장성이 늘어남.
 	//api 특성상 rect를 쓰겠다.
 	//객체에 맞게끔 세팅을 해준다면 
-	_rc = RectMakeCenter(_x, _y, _image->getWidth(), _image->getHeight());
-
 	/*
 			↑  이렇게 안하고 그냥 52 64 상수때려박으면 확장성이 막힌다. 다른곳에 안쓰고 그냥 이거만쓰겠단소리.
 
 			_x,_y 얘를 연결해줄 방법을 생각하자.
 	*/
+
+	_flame = new Flame;
+	_flame->init("Flame.bmp", &_x, &_y);
+
+//	spRocket.push_back(std::shared_ptr<Rocket>(new Rocket));
+
+	
+	
 
 	
 
@@ -62,9 +68,11 @@ void Rocket::update(void)
 	{
 
 	}
+	_flame->update();
 }
 
 void Rocket::render()
 {
 	_image->render(getMemDC(), _rc.left, _rc.top);
+	_flame->render();
 }

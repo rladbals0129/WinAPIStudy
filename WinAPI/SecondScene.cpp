@@ -14,6 +14,12 @@ HRESULT SecondScene::init(void)
 
 	_rocket = new Rocket;
 	_rocket->init();
+
+	//std::shared_ptr<Rocket> PlayerA = std::make_shared<Rocket>();
+	//std::shared_ptr<Rocket> PlayerB = PlayerA->get_shared_ptr();
+
+	//PlayerA.use_count();
+
 	return S_OK;
 }
 
