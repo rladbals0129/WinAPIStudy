@@ -1,6 +1,7 @@
 #pragma once
 #include "GameNode.h"
 #include "Flame.h"
+#include "Bullets.h"
 
 //클래스를 만들면 가장 먼저...
 // 설계와의 싸움
@@ -67,6 +68,7 @@ private:
 	
 	Flame* _flame;
 
+	Missile* _missile;
 	//GImage* objectData;
 
 	RECT _rc;

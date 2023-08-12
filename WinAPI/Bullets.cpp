@@ -5,9 +5,6 @@ HRESULT Missile::init(int bulletMax, float range)
 {
 	_range = range;
 
-
-
-
 	for (int i = 0; i < bulletMax; i++)
 	{
 		tagBullet bullet;
@@ -26,6 +23,7 @@ HRESULT Missile::init(int bulletMax, float range)
 			true,
 			RGB(255, 0, 255));
 		bullet.fire = false;
+		bullet.frameTick = 7.0f;
 		bullet.speed = 5.0f;
 		_vBullet.push_back(bullet);
 	}
@@ -40,7 +38,7 @@ void Missile::release(void)
 		SAFE_DELETE(_viBullet->img);
 	}
 	_vBullet.clear();
-	//ÄÜ½Ã?
+	
 	
 }
 
@@ -71,10 +69,46 @@ void Missile::fire(float x, float y)
 
 void Missile::draw(void)
 {
+	for (_viBullet = _vBullet.begin(); _viBullet != _vBullet.end(); ++_viBullet)
+	{
+		if (_viBullet->fire)
+		{
+			_viBullet->img->frameRender(getMemDC(), _viBullet->rc.left, _viBullet->rc.top, _viBullet->img->getFrameX(), _viBullet->img->getFrameY());
+
+		}
+
+	}
 }
 
 void Missile::move(void)
 {
+	for (_viBullet = _vBullet.begin(); _viBullet != _vBullet.end(); ++_viBullet)
+	{
+		if (!_viBullet->fire) continue;
+		_viBullet->angle = getAngle(_viBullet->x, _viBullet->y,_ptMouse.x, _ptMouse.y);
+		
+		_viBullet->fireX += cos(_viBullet->angle) * _viBullet->speed;
+		_viBullet->fireY -= sin(_viBullet->angle) * _viBullet->speed;
+		//_viBullet->fireY -= _viBullet->speed;
+		_viBullet->rc = RectMakeCenter(_viBullet->fireX, _viBullet->fireY, _viBullet->img->getFrameWidth(), _viBullet->img->getFrameHeight());
+		
+		if (getDistance(_viBullet->x, _viBullet->y, _viBullet->fireX, _viBullet->fireY) > _range)
+		{
+			_viBullet->fire = false;
+		}
+
+		if (_viBullet->frameTick + BULLETS_COUNT <= GetTickCount())
+		{
+			_viBullet->frameTick = GetTickCount();
+			_viBullet->img->setFrameX(_viBullet->img->getFrameX() + 1);
+			if (_viBullet->img->getFrameX() >= _viBullet->img->getMaxFrameX())
+			{
+				_viBullet->img->setFrameX(0);
+			}
+		}
+
+
+	}
 }
 
 

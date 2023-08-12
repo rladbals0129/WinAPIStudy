@@ -1,6 +1,8 @@
 #pragma once
 #include "GameNode.h"
 
+#define BULLETS_COUNT 4.0f
+
 //적도 총알쓰고 나도 총알쓰고.. 슈팅게임에선 당연하다. 공통되는 특성들을 적용하자
 //기능을 묶었다 묶을수있는건 묶자
 struct tagBullet
@@ -13,6 +15,7 @@ struct tagBullet
 	float fireX, fireY;
 	float angle;
 	float speed;
+	float frameTick;
 	bool fire;
 };
 
