@@ -69,48 +69,43 @@ void Missile::fire(float x, float y)
 
 void Missile::draw(void)
 {
+
 	for (_viBullet = _vBullet.begin(); _viBullet != _vBullet.end(); ++_viBullet)
 	{
-		if (_viBullet->fire)
+		if (_viBullet->fire) continue;
+		_viBullet->img->frameRender(getMemDC(), _viBullet->rc.left, _viBullet->rc.top, _viBullet->img->getFrameX(), _viBullet->img->getFrameY());
+
+		_viBullet->count++;
+
+		if (_viBullet->count % 5 == 0)
 		{
-			_viBullet->img->frameRender(getMemDC(), _viBullet->rc.left, _viBullet->rc.top, _viBullet->img->getFrameX(), _viBullet->img->getFrameY());
-
-		}
-
-	}
-}
-
-void Missile::move(void)
-{
-	for (_viBullet = _vBullet.begin(); _viBullet != _vBullet.end(); ++_viBullet)
-	{
-		if (!_viBullet->fire) continue;
-		_viBullet->angle = getAngle(_viBullet->x, _viBullet->y,_ptMouse.x, _ptMouse.y);
-		
-		_viBullet->fireX += cos(_viBullet->angle) * _viBullet->speed;
-		_viBullet->fireY -= sin(_viBullet->angle) * _viBullet->speed;
-		//_viBullet->fireY -= _viBullet->speed;
-		_viBullet->rc = RectMakeCenter(_viBullet->fireX, _viBullet->fireY, _viBullet->img->getFrameWidth(), _viBullet->img->getFrameHeight());
-		
-		if (getDistance(_viBullet->x, _viBullet->y, _viBullet->fireX, _viBullet->fireY) > _range)
-		{
-			_viBullet->fire = false;
-		}
-
-		if (_viBullet->frameTick + BULLETS_COUNT <= GetTickCount())
-		{
-			_viBullet->frameTick = GetTickCount();
 			_viBullet->img->setFrameX(_viBullet->img->getFrameX() + 1);
+
 			if (_viBullet->img->getFrameX() >= _viBullet->img->getMaxFrameX())
 			{
 				_viBullet->img->setFrameX(0);
 			}
+			_viBullet->count = 0;
 		}
-
-
 	}
 }
 
+
+void Missile::move(void)
+{
+	
+	for (_viBullet = _vBullet.begin(); _viBullet != _vBullet.end(); ++_viBullet)
+	{
+		if (_viBullet->fire) continue;
+		_viBullet->y -= _viBullet->speed;
+		_viBullet->rc = RectMakeCenter(_viBullet->x, _viBullet->y, _viBullet->img->getFrameWidth(), _viBullet->img->getFrameHeight());
+
+		if (_range < getDistance(_viBullet->fireX, _viBullet->fireY, _viBullet->x, _viBullet->y))
+		{
+			_viBullet->fire = false;
+		}
+	}
+}
 
 
 //===========================================
@@ -190,12 +185,45 @@ void MissileM1::fire(float x, float y)
 
 void MissileM1::draw(void)
 {
+
+	for (_viBullet = _vBullet.begin(); _viBullet != _vBullet.end(); ++_viBullet)
+	{
+		_viBullet->img->frameRender(getMemDC(), _viBullet->rc.left, _viBullet->rc.top, _viBullet->img->getFrameX(), _viBullet->img->getFrameY());
+
+		_viBullet->count++;
+
+		if (_viBullet->count % 5 == 0)
+		{
+			_viBullet->img->setFrameX(_viBullet->img->getFrameX() + 1);
+
+			if (_viBullet->img->getFrameX() >= _viBullet->img->getMaxFrameX())
+			{
+				_viBullet->img->setFrameX(0);
+			}
+			_viBullet->count = 0;
+		}
+	}
 }
 
 void MissileM1::move(void)
 {
-}
 
+	for (_viBullet = _vBullet.begin(); _viBullet != _vBullet.end();)
+	{
+		_viBullet->y -= _viBullet->speed;
+		_viBullet->rc = RectMakeCenter(_viBullet->x, _viBullet->y, _viBullet->img->getFrameWidth(), _viBullet->img->getFrameHeight());
+
+		if (_range < getDistance(_viBullet->fireX, _viBullet->fireY, _viBullet->x, _viBullet->y))
+		{
+			SAFE_DELETE(_viBullet->img);
+			_viBullet = _vBullet.erase(_viBullet);
+		}
+		else
+		{
+			++_viBullet;
+		}
+	}
+}
 
 /*
 과제1. 로켓 미사일 발사

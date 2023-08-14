@@ -70,6 +70,12 @@
     <Filter Include="소스 파일\슈팅게임\Player">
       <UniqueIdentifier>{fc3a3b3c-bb67-4ced-bc31-e0d00a25d2b9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\슈팅게임\Enemy">
+      <UniqueIdentifier>{055ed218-0a3b-46fa-a4cd-c116d8a69ee5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\슈팅게임\Bullets">
+      <UniqueIdentifier>{fafc634f-30a3-4755-9ad9-cb0b92ec9714}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Resource.h">
@@ -159,8 +165,17 @@
     <ClInclude Include="Utils.h">
       <Filter>2D FrameWork\Utility</Filter>
     </ClInclude>
+    <ClInclude Include="Enemy.h">
+      <Filter>소스 파일\슈팅게임\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="EnemyManager.h">
+      <Filter>소스 파일\슈팅게임\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="Minion.h">
+      <Filter>소스 파일\슈팅게임\Enemy</Filter>
+    </ClInclude>
     <ClInclude Include="Bullets.h">
-      <Filter>소스 파일\슈팅게임</Filter>
+      <Filter>소스 파일\슈팅게임\Bullets</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -239,8 +254,17 @@
     <ClCompile Include="Utils.cpp">
       <Filter>2D FrameWork\Utility</Filter>
     </ClCompile>
+    <ClCompile Include="Enemy.cpp">
+      <Filter>소스 파일\슈팅게임\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="EnemyManager.cpp">
+      <Filter>소스 파일\슈팅게임\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="Minion.cpp">
+      <Filter>소스 파일\슈팅게임\Enemy</Filter>
+    </ClCompile>
     <ClCompile Include="Bullets.cpp">
-      <Filter>소스 파일\슈팅게임</Filter>
+      <Filter>소스 파일\슈팅게임\Bullets</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

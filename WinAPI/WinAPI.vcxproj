@@ -151,6 +151,8 @@
     <ClInclude Include="C3DMatrix.h" />
     <ClInclude Include="C3DVector.h" />
     <ClInclude Include="CommonMacroFunction.h" />
+    <ClInclude Include="Enemy.h" />
+    <ClInclude Include="EnemyManager.h" />
     <ClInclude Include="Example_Mole.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
@@ -178,6 +180,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClInclude>
     <ClInclude Include="MainGame4.h" />
+    <ClInclude Include="Minion.h" />
     <ClInclude Include="RandomFunction.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="ResourceClass.h" />
@@ -196,6 +199,8 @@
     <ClCompile Include="Bullets.cpp" />
     <ClCompile Include="C3DMatrix.cpp" />
     <ClCompile Include="C3DVector.cpp" />
+    <ClCompile Include="Enemy.cpp" />
+    <ClCompile Include="EnemyManager.cpp" />
     <ClCompile Include="Example_Mole.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
@@ -223,6 +228,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="MainGame4.cpp" />
+    <ClCompile Include="Minion.cpp" />
     <ClCompile Include="ResourceClass.cpp" />
     <ClCompile Include="Rocket.cpp" />
     <ClCompile Include="SecondScene.cpp" />

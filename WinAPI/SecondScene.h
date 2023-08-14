@@ -2,6 +2,7 @@
 #include "GameNode.h"
 #include "TempSoundScene.h"
 #include "Rocket.h"
+#include "EnemyManager.h"
 class SecondScene : public GameNode
 {
 private:
@@ -11,6 +12,7 @@ private:
 	TempSoundScene* _temp;
 
 	Rocket* _rocket;
+	EnemyManager* _em;
 
 
 public:

@@ -14,7 +14,8 @@ HRESULT SecondScene::init(void)
 
 	_rocket = new Rocket;
 	_rocket->init();
-
+	_em = new EnemyManager;
+	_em->init();
 	//std::shared_ptr<Rocket> PlayerA = std::make_shared<Rocket>();
 	//std::shared_ptr<Rocket> PlayerB = PlayerA->get_shared_ptr();
 
@@ -38,7 +39,7 @@ void SecondScene::update(void)
 		}
 	}
 	_rocket->update();
-
+	_em->update();
 	_temp->update();
 	//_bgSpeed += 3;
 	cout << _bgSpeed << endl;
@@ -63,6 +64,7 @@ void SecondScene::render()
 	wsprintf(str, "새로운방식");
 	FONTMANAGER->drawText(getMemDC(), 100, 400, "궁서", 70, 600, str, strlen(str),RGB(255,0,0));
 	_rocket->render();
+	_em->render();
 }
 
 SecondScene::SecondScene()

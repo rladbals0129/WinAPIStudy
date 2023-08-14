@@ -68,9 +68,10 @@ private:
 	
 	Flame* _flame;
 
-	Missile* _missile;
+	MissileM1* _missile;
 	//GImage* objectData;
-
+	
+	
 	RECT _rc;
 	float _x, _y;
 
