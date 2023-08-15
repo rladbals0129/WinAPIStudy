@@ -48,6 +48,7 @@ void EnemyManager::setMinion(void)
 			Enemy* jellyFish;
 			jellyFish = new Minion;
 			jellyFish->init("ÇØÆÄ¸®", PointMake(250 + j * 200, 100 + i * 100));
+			
 			_vMinion.push_back(jellyFish);
 		}
 	}

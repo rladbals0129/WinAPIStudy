@@ -8,5 +8,6 @@ public:
 
 	Minion();
 	~Minion();
+	
 };
 
