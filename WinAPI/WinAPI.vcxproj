@@ -192,6 +192,8 @@
     <ClInclude Include="targetver.h" />
     <ClInclude Include="TempSoundManager.h" />
     <ClInclude Include="TempSoundScene.h" />
+    <ClInclude Include="TimeManager.h" />
+    <ClInclude Include="Timer.h" />
     <ClInclude Include="Utils.h" />
     <ClInclude Include="WinAPI.h" />
   </ItemGroup>
@@ -238,6 +240,8 @@
     </ClCompile>
     <ClCompile Include="TempSoundManager.cpp" />
     <ClCompile Include="TempSoundScene.cpp" />
+    <ClCompile Include="TimeManager.cpp" />
+    <ClCompile Include="Timer.cpp" />
     <ClCompile Include="Utils.cpp" />
     <ClCompile Include="WinAPI.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>

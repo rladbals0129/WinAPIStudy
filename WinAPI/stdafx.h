@@ -98,6 +98,15 @@ chrono
 #include <cassert> //c++프로그래머의 희망. -> 잘 쓰면
 #include <bitset>// 비트연산을 좀 더 쉽게 관리해주는 함수를 지원하는 STL
 // ㄴ reset(),set(),flip(),all(),any(),size() 등등..
+
+#include <algorithm> //람다
+//함수 포인터 변수처럼 주고받을수있다
+//bind : 특정 인자에 대해서만 함수를 실행시키고싶을떄/특정인자와 특정 함수를 묶어버릴때
+// ㄴ 함수포인터->이벤트->트리거->델리게이트->액션트리거->관찰자패턴
+//우리도 쓰고있었다. 윈도우프로시저(콜백함수)
+#include <functional>
+
+
 using namespace std;
 /*
 //D2D/D3D 헤더 파일
@@ -128,6 +137,7 @@ ID2D1HwndRenderTarget* _ID2DRenderTarget = nullptr;
 #include "FontManager.h"
 #include "TempSoundManager.h"
 #include "Utils.h"
+//#include "TimeManager.h"
 
 using namespace MY_UTIL;
 
@@ -137,6 +147,7 @@ using namespace MY_UTIL;
 #define IMAGEMANAGER ImageManager::getSingleton()
 #define FONTMANAGER FontManager::getSingleton()
 #define TEMPSOUNDMANAGER TempSoundManager::getSingleton()
+//#define TIMEMANAGER TimeManager::getSingleton()
 
 //타이틀
 #define WINNAME		(LPTSTR)(TEXT("WindowsAPI"))

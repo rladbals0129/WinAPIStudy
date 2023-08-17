@@ -60,6 +60,13 @@ ex)
 
 //enable_shared_from_this : 객체의 생성 및 소멸에 의한 참조 문제를 해결한다.
 // ㄴ 각각의 객체에게 소유권을 부여한다.
+
+enum EWeapon
+{
+	MISSILE, BEAM
+};
+
+
 class Rocket : public GameNode /*, public std::enable_shared_from_this<Rocket>*/ //소유권을 주장할 놈이 누구인지 작성해줘야함Rocket
 {
 private:
@@ -67,8 +74,11 @@ private:
 	//대상 객채를 바꿔줄수 있다. 확장성을 위해
 	
 	Flame* _flame;
+	EWeapon _setWeapon;
 
 	MissileM1* _missile;
+	Beam* _beam;
+	bool _beamIrradiation;
 	//GImage* objectData;
 	
 	
