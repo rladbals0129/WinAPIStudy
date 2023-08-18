@@ -8,7 +8,8 @@ void SecondScene::collision(void)
 		for (int j = 0; j < _em->getMinions().size(); j++)
 		{
 			RECT rc;
-			if (IntersectRect(&rc, &_rocket->getMissile()->getBullet()[i].rc, &CollisionAreaResizing(_em->getMinions()[j]->getRect(), 40, 30)))
+			if (IntersectRect(&rc, &_rocket->getMissile()->getBullet()[i].rc,
+				&CollisionAreaResizing(_em->getMinions()[j]->getRect(), 40, 30)))
 			{
 				
 				_rocket->removeMissile(i);
@@ -24,7 +25,8 @@ void SecondScene::collision(void)
 		for (int j = 0; j < _em->getMinions().size(); j++)
 		{
 			RECT rc;
-			if (IntersectRect(&rc, &_rocket->getBeam()->getBullet()[i].rc, &CollisionAreaResizing(_em->getMinions()[j]->getRect(), 40, 30)))
+			if (IntersectRect(&rc, &_rocket->getBeam()->getBullet()[i].rc,
+				&CollisionAreaResizing(_em->getMinions()[j]->getRect(), 40, 30)))
 			{
 
 				

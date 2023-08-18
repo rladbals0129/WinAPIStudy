@@ -3,7 +3,8 @@
 
 HRESULT Timer::init(void)
 {
-    // QueryPerformanceFrequency(): 초당 진동 수를 체크하고 고성능 타이머를 지원하면 t,  반대면 f를 지불한다.
+    // QueryPerformanceFrequency(): 초당 진동 수를 체크하고 고성능 
+    //타이머를 지원하면 t,  반대면 f를 지불한다.
     // ㄴ LARGE_INTEGER
     // _periodFrequency : 초당 파악할 수 있는 시간이 들어간다.(기본은 밀리세컨)
     // 사용이 가능 한 경우
