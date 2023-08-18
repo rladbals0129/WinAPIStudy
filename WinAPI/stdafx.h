@@ -137,7 +137,7 @@ ID2D1HwndRenderTarget* _ID2DRenderTarget = nullptr;
 #include "FontManager.h"
 #include "TempSoundManager.h"
 #include "Utils.h"
-//#include "TimeManager.h"
+#include "TimeManager.h"
 
 using namespace MY_UTIL;
 
@@ -147,7 +147,7 @@ using namespace MY_UTIL;
 #define IMAGEMANAGER ImageManager::getSingleton()
 #define FONTMANAGER FontManager::getSingleton()
 #define TEMPSOUNDMANAGER TempSoundManager::getSingleton()
-//#define TIMEMANAGER TimeManager::getSingleton()
+#define TIMEMANAGER TimeManager::getSingleton()
 
 //≈∏¿Ã∆≤
 #define WINNAME		(LPTSTR)(TEXT("WindowsAPI"))

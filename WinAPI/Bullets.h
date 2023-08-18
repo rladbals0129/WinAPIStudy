@@ -66,6 +66,10 @@ public:
 	void draw(void);
 	void move(void);
 
+	vector<tagBullet> getBullet(void) { return _vBullet; }
+
+	void removeBullet(int arrNum);
+
 	MissileM1() {}
 	~MissileM1() {}
 
@@ -81,7 +85,6 @@ private:
 	typedef vector<tagBullet>::iterator iterBullet;
 
 	float _range;
-
 	int _bulletMax; 
 
 public:
@@ -93,6 +96,8 @@ public:
 	void fire(float x, float y);
 	void draw(void);
 	void move(void);
+	vector<tagBullet> getBullet(void) { return _vBullet; }
+
 
 	Beam() {}
 	~Beam() {}

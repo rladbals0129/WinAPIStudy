@@ -27,6 +27,8 @@ public:
 	void draw(void);
 	void animation(void);
 
+	RECT getRect(void) { return _rc; }
+
 	Enemy(void);
 	~Enemy(void) {}
 

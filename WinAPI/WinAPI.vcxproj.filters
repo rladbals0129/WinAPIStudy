@@ -278,6 +278,9 @@
     <ClCompile Include="TempSoundScene.cpp">
       <Filter>2D FrameWork\FrameWorkManager</Filter>
     </ClCompile>
+    <ClCompile Include="Collision.cpp">
+      <Filter>소스 파일\씬관리</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="WinAPI.rc">

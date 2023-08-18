@@ -225,6 +225,12 @@ void MissileM1::move(void)
 	}
 }
 
+void MissileM1::removeBullet(int arrNum)
+{
+	SAFE_DELETE(_vBullet[arrNum].img);
+	_vBullet.erase(_vBullet.begin() + arrNum);
+}
+
 /*
 과제1. 로켓 미사일 발사
 - draw와 move 함수를 완성하고 로켓이 미사일을 발사한다.

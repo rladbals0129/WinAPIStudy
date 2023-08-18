@@ -1,7 +1,7 @@
 #pragma once
 #include "SingletonBase.h"
 #include "Timer.h"
-class TimeManager : public SingletonBase<TimeManager>
+class TimeManager : public SingletonBase <TimeManager>
 {
 private:
 	Timer* _timer;

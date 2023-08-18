@@ -53,3 +53,9 @@ void EnemyManager::setMinion(void)
 		}
 	}
 }
+
+void EnemyManager::removeMinion(int arrNum)
+{
+	SAFE_DELETE(_vMinion[arrNum]);
+	_vMinion.erase(_vMinion.begin() + arrNum);
+}

@@ -124,3 +124,9 @@ void Rocket::render()
 	_missile->render();
 	_beam->render();
 }
+
+void Rocket::removeMissile(int arrNum)
+{
+	_missile->removeBullet(arrNum);
+
+}

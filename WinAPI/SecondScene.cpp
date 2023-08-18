@@ -41,6 +41,7 @@ void SecondScene::update(void)
 	_rocket->update();
 	_em->update();
 	_temp->update();
+	collision();
 	//_bgSpeed += 3;
 	cout << _bgSpeed << endl;
 }

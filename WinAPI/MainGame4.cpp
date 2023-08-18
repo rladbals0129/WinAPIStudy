@@ -96,6 +96,8 @@ void MainGame4::render(void)
 	
 	_currentScene->render();
 
+	TIMEMANAGER->render(getMemDC());
+
 	//=================================================
 	this->getBackBuffer()->render(getHDC());
 

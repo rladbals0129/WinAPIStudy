@@ -101,6 +101,11 @@ public:
 	{
 		return shared_from_this();
 	}*/
+	void removeMissile(int arrNum);
+
+	MissileM1* getMissile(void) { return _missile; }
+	Beam* getBeam(void) { return _beam; }
+	RECT getRect(void) { return _rc; }
 
 	Rocket() { /*objectData = new GImage[10];*/ }
 	~Rocket() { /*delete[] objectData;*/ }

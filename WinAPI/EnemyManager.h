@@ -18,5 +18,8 @@ public:
 	void render();
 
 	void setMinion(void);
+	void removeMinion(int arrNum);
+
+	vector<Enemy*> getMinions(void) { return _vMinion; }
 };
 

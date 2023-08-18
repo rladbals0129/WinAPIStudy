@@ -1,5 +1,5 @@
 #pragma once
-#include "GameNode.h"
+
 /*
 API 공용 함수
 ㄴ 문제가 있다..
