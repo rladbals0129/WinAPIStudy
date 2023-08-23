@@ -1,6 +1,111 @@
 #include "stdafx.h"
 #include "Bullets.h"
 
+
+HRESULT Bullet::init(const char* imageName, int bulletMax, float range)
+{
+	_imageName = imageName;
+	_range = range;
+	_bulletMax = bulletMax;
+
+	return S_OK;
+}
+
+void Bullet::release(void)
+{
+	_vBullet.clear(); 
+}
+
+void Bullet::update(void)
+{
+	move();
+}
+
+void Bullet::render()
+{
+	draw();
+}
+
+void Bullet::fire(float x, float y, float angle, float speed)
+{
+	if (_bulletMax <= _vBullet.size()) return;
+
+	tagBullet bullet;
+	ZeroMemory(&bullet, sizeof(tagBullet)); 
+	bullet.img = IMAGEMANAGER->findImage(_imageName);
+	bullet.angle = angle;
+	//bullet.img = new GImage;
+	//bullet.img->init("Resources/Images/Object/Missile.bmp",
+	//	0.0f, 0.0f,
+	//	416, 64,
+	//	13, 1,
+	//	true,
+	//	RGB(255, 0, 255));
+	bullet.speed = 5.0f;
+	bullet.x = bullet.fireX = x;
+	bullet.y = bullet.fireY = y;
+	bullet.rc = RectMakeCenter(bullet.x, bullet.y,
+		bullet.img->getWidth(), bullet.img->getHeight());
+
+	//	_viBullet->rc = RectMakeCenter(_viBullet->x, _viBullet->y,_viBullet->img->getFrameWidth(), _viBullet->img->getFrameHeight());
+	_vBullet.push_back(bullet);
+
+
+
+	/*for (_viBullet = _vBullet.begin(); _viBullet != _vBullet.end(); ++_viBullet)
+	{
+		if (_viBullet->fire) continue;
+
+		_viBullet->fire = true;
+		_viBullet->x = _viBullet->fireX = x;
+		_viBullet->y = _viBullet->fireY = y;
+		_viBullet->rc = RectMakeCenter(_viBullet->x, _viBullet->y, _viBullet->img->getFrameWidth(), _viBullet->img->getFrameHeight());
+
+		break;
+	}*/
+
+}
+
+void Bullet::draw(void)
+{
+	for (_viBullet = _vBullet.begin(); _viBullet != _vBullet.end(); ++_viBullet)
+	{
+		_viBullet->img->render(getMemDC(), _viBullet->rc.left, _viBullet->rc.top);
+
+	}
+
+}
+
+void Bullet::move(void)
+{
+	for (_viBullet = _vBullet.begin(); _viBullet != _vBullet.end();)
+	{
+		_viBullet->x += cos(_viBullet->angle) * _viBullet->speed;
+		_viBullet->y += -sinf(_viBullet->angle) * _viBullet->speed;
+	
+		_viBullet->rc = RectMakeCenter(_viBullet->x, _viBullet->y, _viBullet->img->getWidth(), _viBullet->img->getHeight());
+
+		if (_range < getDistance(_viBullet->fireX, _viBullet->fireY, _viBullet->x, _viBullet->y))
+		{
+
+			//SAFE_DELETE는 하면안댐 . findImage로 찾았기 떄문에 
+			_viBullet = _vBullet.erase(_viBullet);
+		}
+		else
+		{
+			++_viBullet;
+		}
+	}
+}
+
+void Bullet::removeBullet(int arrNum)
+{
+	_vBullet.erase(_vBullet.begin() + arrNum);
+
+}
+
+
+
 HRESULT Missile::init(int bulletMax, float range)
 {
 	_range = range;

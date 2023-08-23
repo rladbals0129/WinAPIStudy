@@ -2,6 +2,7 @@
 #include "GameNode.h"
 #include "Flame.h"
 #include "Bullets.h"
+#include "ProgressBar.h"
 
 //클래스를 만들면 가장 먼저...
 // 설계와의 싸움
@@ -66,6 +67,8 @@ enum EWeapon
 	MISSILE, BEAM
 };
 
+class EnemyManager; //클래스 전방선언
+//
 
 class Rocket : public GameNode /*, public std::enable_shared_from_this<Rocket>*/ //소유권을 주장할 놈이 누구인지 작성해줘야함Rocket
 {
@@ -79,8 +82,12 @@ private:
 	MissileM1* _missile;
 	Beam* _beam;
 	bool _beamIrradiation;
+	ProgressBar* _hpBar;
+	int _maxHp;
+	int _currentHp;
+	bool _die;
 	//GImage* objectData;
-	
+	EnemyManager* _em;
 	
 	RECT _rc;
 	float _x, _y;
@@ -106,6 +113,13 @@ public:
 	MissileM1* getMissile(void) { return _missile; }
 	Beam* getBeam(void) { return _beam; }
 	RECT getRect(void) { return _rc; }
+	void hitDamage(float x) { _currentHp -= x; }
+
+
+	virtual void collision(void);
+	void setEnemyManagerMemoryAddress(EnemyManager* em) { _em = em; }
+	
+	POINT getPosition(void) { return PointMake((int)_x, (int)_y); }
 
 	Rocket() { /*objectData = new GImage[10];*/ }
 	~Rocket() { /*delete[] objectData;*/ }

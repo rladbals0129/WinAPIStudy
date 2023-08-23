@@ -104,3 +104,37 @@ public:
 
 
 };
+
+//공용 총알 (쏠때마다 만들고 삭제)
+class Bullet : public GameNode
+{
+private:
+	vector<tagBullet> _vBullet;
+	vector<tagBullet>::iterator _viBullet;
+
+	const char* _imageName;
+	int _bulletMax;
+	
+
+	float _range;
+
+public:
+	HRESULT init(const char* imageName,int bulletMax, float range);
+	void release(void);
+	void update(void);
+	void render();
+
+	void fire(float x, float y, float angle, float speed);
+	void draw(void);
+	void move(void);
+
+	void removeBullet(int arrNum);
+
+	vector<tagBullet> getBullet(void) { return _vBullet; }
+
+
+	Bullet(void) {}	 //차후에 캐스팅이있을수있기때문에 void명시
+	virtual ~Bullet() {} //총알이 언제 지워질지 모르기 떄문에
+
+
+};

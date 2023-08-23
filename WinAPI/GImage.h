@@ -1,4 +1,29 @@
 #pragma once
+//include 는 복사다 c++에서
+// 전처리기 단계가 길어지면서 메모리사용량+ 컴파일시간 증가
+//#include "Animation.h"
+
+class Animation; //애니메이션 클래스라는게 있대. 걔가뭔데? 몰라
+//ㄴ 있다는거만 알고있어라.
+
+// -선행- ㄴ 전방선언이 들어오면 문법적으로 cpp에 include가 들어와 줘야 한다.
+
+/*
+- 클래스 전방선언
+
+전방선언 + 전처리기문 ->#include 
+
+is a 관계: 제네시스는 차다. (include)
+
+has a 관계: 제네시스는 바퀴를 가지고 있다. (클래스 전방선언)
+
+
+-이를 해결하기 위해 전방선언으로 풀어줄 수 있다.
+ㄴ 1. 클래스의 포인터 / 참조 형식으로 이름만 참조할 경우
+ㄴ 2. 매개 변수나 리턴타입을 위한 이름만 참조할 경우
+
+*/
+
 class GImage
 {
 public:
@@ -134,7 +159,7 @@ public:
 									//그려지는 영역
 	void loopAlphaRender(HDC hdc, const LPRECT drawArea, int offsetX, int offsetY,BYTE alpha);
 
-
+	void aniRender(HDC hdc, int destX, int destY, Animation* ani);
 
 
 	//렉트를 선행적으로 그려놓고

@@ -76,6 +76,9 @@
     <Filter Include="2D FrameWork\FrameWorkManager\폰트매니저">
       <UniqueIdentifier>{7857c6e2-3cc6-46e0-bd36-42d335070e7f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="2D FrameWork\Animation">
+      <UniqueIdentifier>{59f6d3df-8edf-4dbc-b342-3169a6eb34c4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Resource.h">
@@ -183,6 +186,15 @@
     <ClInclude Include="TempSoundScene.h">
       <Filter>2D FrameWork\FrameWorkManager</Filter>
     </ClInclude>
+    <ClInclude Include="ProgressBar.h">
+      <Filter>소스 파일\슈팅게임</Filter>
+    </ClInclude>
+    <ClInclude Include="AniScene.h">
+      <Filter>소스 파일\슈팅게임\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="Animation.h">
+      <Filter>2D FrameWork\Animation</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="WinAPI.cpp">
@@ -280,6 +292,15 @@
     </ClCompile>
     <ClCompile Include="Collision.cpp">
       <Filter>소스 파일\씬관리</Filter>
+    </ClCompile>
+    <ClCompile Include="ProgressBar.cpp">
+      <Filter>소스 파일\슈팅게임</Filter>
+    </ClCompile>
+    <ClCompile Include="AniScene.cpp">
+      <Filter>소스 파일\슈팅게임\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="Animation.cpp">
+      <Filter>2D FrameWork\Animation</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

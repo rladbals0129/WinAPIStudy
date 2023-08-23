@@ -147,6 +147,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Animation.h" />
+    <ClInclude Include="AniScene.h" />
     <ClInclude Include="Bullets.h" />
     <ClInclude Include="C3DMatrix.h" />
     <ClInclude Include="C3DVector.h" />
@@ -181,6 +183,7 @@
     </ClInclude>
     <ClInclude Include="MainGame4.h" />
     <ClInclude Include="Minion.h" />
+    <ClInclude Include="ProgressBar.h" />
     <ClInclude Include="RandomFunction.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="ResourceClass.h" />
@@ -198,6 +201,8 @@
     <ClInclude Include="WinAPI.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Animation.cpp" />
+    <ClCompile Include="AniScene.cpp" />
     <ClCompile Include="Bullets.cpp" />
     <ClCompile Include="C3DMatrix.cpp" />
     <ClCompile Include="C3DVector.cpp" />
@@ -232,6 +237,7 @@
     </ClCompile>
     <ClCompile Include="MainGame4.cpp" />
     <ClCompile Include="Minion.cpp" />
+    <ClCompile Include="ProgressBar.cpp" />
     <ClCompile Include="ResourceClass.cpp" />
     <ClCompile Include="Rocket.cpp" />
     <ClCompile Include="SecondScene.cpp" />

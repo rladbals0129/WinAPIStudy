@@ -1,6 +1,6 @@
 #include "Stdafx.h"
 #include "GImage.h"
-
+#include "Animation.h"
 
 
 GImage::GImage() :_imageInfo(nullptr),
@@ -690,6 +690,12 @@ void GImage::loopAlphaRender(HDC hdc, const LPRECT drawArea, int offsetX, int of
 {
 	//알파값에대한 예외처리 맨위에 해주고 
 	//호출할때 알파랜더
+}
+
+void GImage::aniRender(HDC hdc, int destX, int destY, Animation* ani)
+{
+	render(hdc, destX, destY, ani->getFramePos().x, ani->getFramePos().y,
+		ani->getFrameWidth(), ani->getFrameHeight());
 }
 
 

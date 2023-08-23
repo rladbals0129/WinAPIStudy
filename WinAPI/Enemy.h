@@ -15,6 +15,9 @@ protected:
 	float _rndTimeCount;
 	float _worldTimeCount;
 
+	float _rndFireCount;
+	float _bulletFireCount;
+
 public:
 	HRESULT init(void);
 	HRESULT init(const char* imageName, POINT position);
@@ -28,6 +31,8 @@ public:
 	void animation(void);
 
 	RECT getRect(void) { return _rc; }
+
+	bool bulletCouintFire(void);
 
 	Enemy(void);
 	~Enemy(void) {}

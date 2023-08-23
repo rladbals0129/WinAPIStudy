@@ -1,6 +1,6 @@
 #include "stdafx.h"
 #include "Rocket.h"
-
+#include "EnemyManager.h" 
 HRESULT Rocket::init(void)
 {
 	_x = static_cast<float>(WINSIZE_X / 2);
@@ -31,8 +31,11 @@ HRESULT Rocket::init(void)
 	_beam->init(1,0.5f);
 	_beamIrradiation = false;
 //	spRocket.push_back(std::shared_ptr<Rocket>(new Rocket));
+	_currentHp = 10;
+	_maxHp = 10;
+	_hpBar = new ProgressBar;
 
-	
+	_hpBar->init(_x, _y , 54, 4);
 	
 
 	
@@ -107,26 +110,90 @@ void Rocket::update(void)
 	default:
 		break;
 	}
+	if (KEYMANAGER->isOnceKeyDown('Z'))
+	{
+		if (_currentHp > 0)
+		{
+			_currentHp--;
+		}
+		else if (_currentHp == 0)
+		{
+			_die = true;
+		}
+		
+	}	
+	if (KEYMANAGER->isOnceKeyDown('X'))
+	{
+		if (_currentHp < 10)
+		{
+			_currentHp++;
+		}
+		
+	}
+	collision();
 	_rc = RectMakeCenter(_x, _y, _image->getWidth(), _image->getHeight());
-
-
-
+	_hpBar->setX(_x - (_rc.right - _rc.left) / 2);
+	_hpBar->setY(_y - (_rc.bottom - _rc.top) / 2);
+	_hpBar->update();
+	_hpBar->setGauge(_currentHp, _maxHp);
+	_hpBar->update();
+	//_hpBar->setGauge();
 
 	_flame->update();
 	_missile->update();
 	_beam->update();
 }
 
-void Rocket::render()
+void Rocket::render() 
 {
 	_image->render(getMemDC(), _rc.left, _rc.top);
 	_flame->render();
 	_missile->render();
 	_beam->render();
+
+	_hpBar->render();
 }
 
 void Rocket::removeMissile(int arrNum)
 {
 	_missile->removeBullet(arrNum);
+
+}
+
+void Rocket::collision(void)
+{
+	for (int i = 0; i < _missile->getBullet().size(); i++)
+	{
+		for (int j = 0; j < _em->getMinions().size(); j++)
+		{
+			RECT rc;
+			if (IntersectRect(&rc, &_missile->getBullet()[i].rc,
+				&CollisionAreaResizing(_em->getMinions()[j]->getRect(), 40, 30)))
+			{
+
+				_missile->removeBullet(i);
+				_em->removeMinion(j);
+				break;
+			}
+		}
+
+	}
+
+	for (int i = 0; i < _beam->getBullet().size(); i++)
+	{
+		for (int j = 0; j < _em->getMinions().size(); j++)
+		{
+			RECT rc;
+			if (IntersectRect(&rc, &_beam->getBullet()[i].rc,
+				&CollisionAreaResizing(_em->getMinions()[j]->getRect(), 40, 30)))
+			{
+
+
+				_em->removeMinion(j);
+				break;
+			}
+		}
+
+	}
 
 }
