@@ -9,7 +9,7 @@ HRESULT AniScene::init(void)
 	_animA = new Animation;//한프레임 사이즈 꼭 확인하기 gdi에선 확인하는게 좋다
 	_animA->init(_image->getWidth(),_image->getHeight(),110,67);//한프레임 너비높이
 	_animA->setDefPlayFrame(false, true);
-	_animA->setFPS(12);
+	_animA->setFPS(1);
 	return S_OK;
 }
 
@@ -26,7 +26,7 @@ void AniScene::update(void)
 		_animA->AniStart();
 	}
 
-	_animA->frameUpdate(TIMEMANAGER->getElapsedTime() * 1);
+	_animA->frameUpdate(TIMEMANAGER->getElapsedTime() * 10);
 }
 
 void AniScene::render()

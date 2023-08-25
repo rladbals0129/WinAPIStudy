@@ -188,6 +188,8 @@
     <ClInclude Include="Resource.h" />
     <ClInclude Include="ResourceClass.h" />
     <ClInclude Include="Rocket.h" />
+    <ClInclude Include="Scene.h" />
+    <ClInclude Include="SceneManager.h" />
     <ClInclude Include="SecondScene.h" />
     <ClInclude Include="SingletonBase.h" />
     <ClInclude Include="StartScene.h" />
@@ -240,6 +242,8 @@
     <ClCompile Include="ProgressBar.cpp" />
     <ClCompile Include="ResourceClass.cpp" />
     <ClCompile Include="Rocket.cpp" />
+    <ClCompile Include="Scene.cpp" />
+    <ClCompile Include="SceneManager.cpp" />
     <ClCompile Include="SecondScene.cpp" />
     <ClCompile Include="StartScene.cpp" />
     <ClCompile Include="Stdafx.cpp">
