@@ -13,7 +13,7 @@ HRESULT MainGame4::init(void)
 	//================================
 
 	SCENEMANAGER->changeScene("시작");
-	
+	//asdasd
 	//_re.init(); //이미지 관리. 정적으로해준다 
 	
 
