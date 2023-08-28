@@ -138,7 +138,7 @@ ID2D1HwndRenderTarget* _ID2DRenderTarget = nullptr;
 #include "TempSoundManager.h"
 #include "Utils.h"
 #include "TimeManager.h"
-
+#include "SceneManager.h"
 using namespace MY_UTIL;
 
 // # 싱글톤 #
@@ -148,7 +148,7 @@ using namespace MY_UTIL;
 #define FONTMANAGER FontManager::getSingleton()
 #define TEMPSOUNDMANAGER TempSoundManager::getSingleton()
 #define TIMEMANAGER TimeManager::getSingleton()
-
+#define SCENEMANAGER SceneManager::getSingleton()
 //타이틀
 #define WINNAME		(LPTSTR)(TEXT("WindowsAPI"))
 
@@ -187,6 +187,7 @@ using namespace MY_UTIL;
 #define SAFE_DELETE(p) {if(p) { delete (p); (p) = nullptr; }}
 #define SAFE_DELETE_ARRAY(p) {if(p) { delete[] (p); (p) = nullptr; }}
 #define SAFE_RELEASE(p)	{if(p) {(p)->release(); (p) = nullptr; }}
+#define SAFE_RELEASE_SCNEN(p) {if(p) {(p)->Release(); (p) = nullptr; }}
 
 // 레일슈터 / 플래포머 / 슈팅					  /   리듬    / RPG / 점프  -> 포폴 장르 추천
 //  ㄴ 마리오          ㄴ삼각함수가 숙련되어야함 

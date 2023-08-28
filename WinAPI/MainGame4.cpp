@@ -1,30 +1,34 @@
 #include "Stdafx.h"
 #include "MainGame4.h"
-
+#include "ShootingScene.h"
+#include "StartScene.h"
 
 
 
 HRESULT MainGame4::init(void)
 {
 	GameNode::init(true);
+	SCENEMANAGER->addScene("슈팅", new ShootingScene);
+	SCENEMANAGER->addScene("시작", new StartScene);
+	//================================
 
-
+	SCENEMANAGER->changeScene("시작");
 	
 	//_re.init(); //이미지 관리. 정적으로해준다 
 	
 
-	_start = new StartScene();
-	_start->init();	
+	//_start = new StartScene();
+	//_start->init();	
 	
-	_second = new SecondScene();
-	_second->init();
+	//_second = new SecondScene();
+	//_second->init();
 
 	// _currentScene -> 시동이 안되면 그냥 실행 자체가 안된다 ->굳이 돌려볼필요도 없다.
-	_currentScene = _start;
+	//_currentScene = _start;
 	// 생성자 winMain동적할당부분에서 세팅이되고 init함수가 실행될때 _currentScene을 _start로 세팅해주고
 
 	//그럴일은 없겠지만 만약 _currentScene에 _start가 제대로 세팅이 안되었다면 터져라
-	assert(_currentScene != nullptr, "MainGame 초기화 부분에서 노드 파트 오류 발생"); 	// <->
+	//assert(_currentScene != nullptr, "MainGame 초기화 부분에서 노드 파트 오류 발생"); 	// <->
 	//커런트씬이 null일때만 돌아라
 
 	//assert는 c. 
@@ -67,8 +71,8 @@ HRESULT MainGame4::init(void)
 void MainGame4::release(void)
 {
 	GameNode::release();
-	SAFE_DELETE(_start);
-	SAFE_DELETE(_second);
+	//SAFE_DELETE(_start);
+	//SAFE_DELETE(_second);
 
 }
 
@@ -76,12 +80,14 @@ void MainGame4::update(void)
 {
 	GameNode::update();
 
-	_currentScene->update();
+	SCENEMANAGER->update();
+
+	/*_currentScene->update();
 
 	if (KEYMANAGER->isOnceKeyDown(VK_RETURN)) { _currentScene = _second; }
 	
 
-	if (KEYMANAGER->isOnceKeyDown(VK_BACK)) { _currentScene = _start; }
+	if (KEYMANAGER->isOnceKeyDown(VK_BACK)) { _currentScene = _start; }*/
 	
 	
 }
@@ -94,7 +100,9 @@ void MainGame4::render(void)
 	
 	//IMAGEMANAGER->alphaRender("데스 스페이스", getMemDC(), 0, 0, _alphaA);
 	
-	_currentScene->render();
+	//_currentScene->render();
+	SCENEMANAGER->render();
+	
 
 	TIMEMANAGER->render(getMemDC());
 

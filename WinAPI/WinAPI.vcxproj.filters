@@ -40,9 +40,6 @@
     <Filter Include="2D FrameWork\GImage">
       <UniqueIdentifier>{0df063a2-5cad-41b0-bbf9-0b5a6305f41e}</UniqueIdentifier>
     </Filter>
-    <Filter Include="소스 파일\씬관리">
-      <UniqueIdentifier>{8dee6009-5b4e-458c-8681-50062e63577e}</UniqueIdentifier>
-    </Filter>
     <Filter Include="소스 파일\리소스관리">
       <UniqueIdentifier>{d0b348e8-4ee3-4a9f-bdeb-3ccbbb33a045}</UniqueIdentifier>
     </Filter>
@@ -81,6 +78,12 @@
     </Filter>
     <Filter Include="2D FrameWork\Scene관리">
       <UniqueIdentifier>{41651452-6475-401a-be2d-4e0a202562e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\임시씬관리">
+      <UniqueIdentifier>{8dee6009-5b4e-458c-8681-50062e63577e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="2D FrameWork\Scene관리\Scene">
+      <UniqueIdentifier>{d4618a03-b406-4ea4-a6c1-420c9e75282e}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -136,13 +139,10 @@
       <Filter>2D FrameWork\FrameWorkManager</Filter>
     </ClInclude>
     <ClInclude Include="SecondScene.h">
-      <Filter>소스 파일\씬관리</Filter>
+      <Filter>소스 파일\임시씬관리</Filter>
     </ClInclude>
     <ClInclude Include="StartScene.h">
-      <Filter>소스 파일\씬관리</Filter>
-    </ClInclude>
-    <ClInclude Include="MainGame4.h">
-      <Filter>소스 파일\씬관리</Filter>
+      <Filter>소스 파일\임시씬관리</Filter>
     </ClInclude>
     <ClInclude Include="FontManager.h">
       <Filter>2D FrameWork\FrameWorkManager\폰트매니저</Filter>
@@ -204,6 +204,12 @@
     <ClInclude Include="Scene.h">
       <Filter>2D FrameWork\Scene관리</Filter>
     </ClInclude>
+    <ClInclude Include="ShootingScene.h">
+      <Filter>2D FrameWork\Scene관리\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="MainGame4.h">
+      <Filter>2D FrameWork\Scene관리</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="WinAPI.cpp">
@@ -252,13 +258,10 @@
       <Filter>2D FrameWork\FrameWorkManager</Filter>
     </ClCompile>
     <ClCompile Include="StartScene.cpp">
-      <Filter>소스 파일\씬관리</Filter>
+      <Filter>소스 파일\임시씬관리</Filter>
     </ClCompile>
     <ClCompile Include="SecondScene.cpp">
-      <Filter>소스 파일\씬관리</Filter>
-    </ClCompile>
-    <ClCompile Include="MainGame4.cpp">
-      <Filter>소스 파일\씬관리</Filter>
+      <Filter>소스 파일\임시씬관리</Filter>
     </ClCompile>
     <ClCompile Include="FontManager.cpp">
       <Filter>2D FrameWork\FrameWorkManager\폰트매니저</Filter>
@@ -299,9 +302,6 @@
     <ClCompile Include="TempSoundScene.cpp">
       <Filter>2D FrameWork\FrameWorkManager</Filter>
     </ClCompile>
-    <ClCompile Include="Collision.cpp">
-      <Filter>소스 파일\씬관리</Filter>
-    </ClCompile>
     <ClCompile Include="ProgressBar.cpp">
       <Filter>소스 파일\슈팅게임</Filter>
     </ClCompile>
@@ -315,6 +315,15 @@
       <Filter>2D FrameWork\Scene관리</Filter>
     </ClCompile>
     <ClCompile Include="SceneManager.cpp">
+      <Filter>2D FrameWork\Scene관리</Filter>
+    </ClCompile>
+    <ClCompile Include="ShootingScene.cpp">
+      <Filter>2D FrameWork\Scene관리\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Collision.cpp">
+      <Filter>2D FrameWork\Scene관리\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="MainGame4.cpp">
       <Filter>2D FrameWork\Scene관리</Filter>
     </ClCompile>
   </ItemGroup>

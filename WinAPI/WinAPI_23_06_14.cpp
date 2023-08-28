@@ -152,7 +152,7 @@ void setWindowSize(int x, int y, int width, int hight)
 
 
 (2일주는과제)
-과제2. 도형을 활용한 내 얼굴 그려오기 ㅋㅋ
+과제2. 도형을 활용한 내 얼굴 그려오기 
 
 - 도형을 활용한다.
 ㄴ 특징을 잘 살리자
@@ -200,7 +200,7 @@ void setWindowSize(int x, int y, int width, int hight)
 /*
 과제1. 두더지게임
 
-- 두더지 수는 최소8마리ㅣ
+- 두더지 수는 최소8마리
 
 - 화면에 현제 점수를 표기한다
 
