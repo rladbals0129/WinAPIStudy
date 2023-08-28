@@ -24,7 +24,7 @@ public:
 	void update(void);
 	void render();
 
-	virtual void collision(void);
+	//virtual void collision(void);
 
 	SecondScene();
 	~SecondScene();

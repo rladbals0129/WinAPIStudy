@@ -6,10 +6,8 @@ HRESULT StartScene::init(void)
 {
 	IMAGEMANAGER->addImage("시작화면", "Resources/Images/BackGround/StartBg.bmp",
 		WINSIZE_X, WINSIZE_Y);
-	IMAGEMANAGER->addImage("텍스트 알파", "Resources/Images/Object/StartText.bmp",
-		1000, 100, true, RGB(255, 0, 255));
-
-	_alpha = _bgAlpha = 0;
+	
+	wsprintf(_text, "StartScene");
 	return S_OK;
 }
 
@@ -20,16 +18,16 @@ void StartScene::release(void)
 
 void StartScene::update(void)
 {
-	_alpha -= 3.0f;
-	if (_alpha <= 0) _alpha = 255;
-
-	_bgAlpha += 0.5f;
-	if (_bgAlpha >= 255)_bgAlpha = 255;
+	if (KEYMANAGER->isOnceKeyDown(VK_RBUTTON))
+	{
+		SCENEMANAGER->changeScene("슈팅");
+	}
 }
 
 void StartScene::render()
 {
 	IMAGEMANAGER->render("시작화면", getMemDC());
+	TextOut(getMemDC(), WINSIZE_X / 2, WINSIZE_Y / 2, _text, strlen(_text));
 
 	/*IMAGEMANAGER->alphaRender("시작화면", getMemDC(), 0, 0, _bgAlpha);
 	
