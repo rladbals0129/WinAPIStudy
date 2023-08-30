@@ -29,6 +29,8 @@ HRESULT GameNode::init(bool managerInit)
 		TEMPSOUNDMANAGER->init();
 		TIMEMANAGER->init();
 		SCENEMANAGER->init();
+		INIDATA->init();
+		
 	}
 	
 	return S_OK;

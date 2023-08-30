@@ -139,6 +139,7 @@ ID2D1HwndRenderTarget* _ID2DRenderTarget = nullptr;
 #include "Utils.h"
 #include "TimeManager.h"
 #include "SceneManager.h"
+#include "INIData.h"
 using namespace MY_UTIL;
 
 // # ΩÃ±€≈Ê #
@@ -149,6 +150,8 @@ using namespace MY_UTIL;
 #define TEMPSOUNDMANAGER TempSoundManager::getSingleton()
 #define TIMEMANAGER TimeManager::getSingleton()
 #define SCENEMANAGER SceneManager::getSingleton()
+#define INIDATA INIData::getSingleton()
+
 //≈∏¿Ã∆≤
 #define WINNAME		(LPTSTR)(TEXT("WindowsAPI"))
 

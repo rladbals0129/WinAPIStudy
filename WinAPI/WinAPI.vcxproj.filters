@@ -85,6 +85,9 @@
     <Filter Include="2D FrameWork\Scene관리\Scene">
       <UniqueIdentifier>{d4618a03-b406-4ea4-a6c1-420c9e75282e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\파일입출력">
+      <UniqueIdentifier>{8c0ba427-9324-41c6-bf0f-78349a03d5a2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Resource.h">
@@ -189,9 +192,6 @@
     <ClInclude Include="TempSoundScene.h">
       <Filter>2D FrameWork\FrameWorkManager</Filter>
     </ClInclude>
-    <ClInclude Include="ProgressBar.h">
-      <Filter>소스 파일\슈팅게임</Filter>
-    </ClInclude>
     <ClInclude Include="AniScene.h">
       <Filter>소스 파일\슈팅게임\Enemy</Filter>
     </ClInclude>
@@ -209,6 +209,15 @@
     </ClInclude>
     <ClInclude Include="MainGame4.h">
       <Filter>2D FrameWork\Scene관리</Filter>
+    </ClInclude>
+    <ClInclude Include="ProgressBar.h">
+      <Filter>소스 파일\슈팅게임\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="INIData.h">
+      <Filter>소스 파일\파일입출력</Filter>
+    </ClInclude>
+    <ClInclude Include="INIDataScene.h">
+      <Filter>소스 파일\파일입출력</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -302,9 +311,6 @@
     <ClCompile Include="TempSoundScene.cpp">
       <Filter>2D FrameWork\FrameWorkManager</Filter>
     </ClCompile>
-    <ClCompile Include="ProgressBar.cpp">
-      <Filter>소스 파일\슈팅게임</Filter>
-    </ClCompile>
     <ClCompile Include="AniScene.cpp">
       <Filter>소스 파일\슈팅게임\Enemy</Filter>
     </ClCompile>
@@ -325,6 +331,15 @@
     </ClCompile>
     <ClCompile Include="MainGame4.cpp">
       <Filter>2D FrameWork\Scene관리</Filter>
+    </ClCompile>
+    <ClCompile Include="ProgressBar.cpp">
+      <Filter>소스 파일\슈팅게임\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="INIData.cpp">
+      <Filter>소스 파일\파일입출력</Filter>
+    </ClCompile>
+    <ClCompile Include="INIDataScene.cpp">
+      <Filter>소스 파일\파일입출력</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

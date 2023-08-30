@@ -164,6 +164,8 @@
     <ClInclude Include="GameNode.h" />
     <ClInclude Include="GImage.h" />
     <ClInclude Include="ImageManager.h" />
+    <ClInclude Include="INIDataScene.h" />
+    <ClInclude Include="INIData.h" />
     <ClInclude Include="IWindowsMessageHandler.h" />
     <ClInclude Include="KeyManager.h" />
     <ClInclude Include="MainGame.h">
@@ -221,6 +223,8 @@
     <ClCompile Include="GameNode.cpp" />
     <ClCompile Include="GImage.cpp" />
     <ClCompile Include="ImageManager.cpp" />
+    <ClCompile Include="INIDataScene.cpp" />
+    <ClCompile Include="INIData.cpp" />
     <ClCompile Include="IWindowsMessageHandler.cpp" />
     <ClCompile Include="KeyManager.cpp" />
     <ClCompile Include="MainGame.cpp">

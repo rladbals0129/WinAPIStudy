@@ -2,17 +2,19 @@
 #include "MainGame4.h"
 #include "ShootingScene.h"
 #include "StartScene.h"
-
+#include "INIDataScene.h"
 
 
 HRESULT MainGame4::init(void)
 {
 	GameNode::init(true);
 	SCENEMANAGER->addScene("슈팅", new ShootingScene);
-	SCENEMANAGER->addScene("시작", new StartScene);
+	SCENEMANAGER->addScene("INI", new INIDataScene);
 	//================================
 
-	SCENEMANAGER->changeScene("시작");
+
+
+	SCENEMANAGER->changeScene("INI");
 	//asdasd
 	//_re.init(); //이미지 관리. 정적으로해준다 
 	
