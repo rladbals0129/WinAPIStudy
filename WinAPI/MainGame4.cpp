@@ -9,12 +9,12 @@ HRESULT MainGame4::init(void)
 {
 	GameNode::init(true);
 	SCENEMANAGER->addScene("슈팅", new ShootingScene);
-	SCENEMANAGER->addScene("INI", new INIDataScene);
+	SCENEMANAGER->addScene("시작", new StartScene);
 	//================================
 
 
 
-	SCENEMANAGER->changeScene("INI");
+	SCENEMANAGER->changeScene("시작");
 	//asdasd
 	//_re.init(); //이미지 관리. 정적으로해준다 
 	
@@ -63,7 +63,6 @@ HRESULT MainGame4::init(void)
 	assert() : "c" -> 컴파일 타임을 지나 프로그램을 실행시키고 문제를 파악하겠다
 	static_assert(): "C++" -> 컴파일 중에 문제를 파악
 										ㄴ 상수값을 안에 넣어줘야겠군 (tip.컴파일 나오면 상수생각해보기)
-
 
 	*/
 	

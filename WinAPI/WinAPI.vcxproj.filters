@@ -219,6 +219,9 @@
     <ClInclude Include="INIDataScene.h">
       <Filter>소스 파일\파일입출력</Filter>
     </ClInclude>
+    <ClInclude Include="SoundManager.h">
+      <Filter>2D FrameWork\FrameWorkManager</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="WinAPI.cpp">
@@ -340,6 +343,9 @@
     </ClCompile>
     <ClCompile Include="INIDataScene.cpp">
       <Filter>소스 파일\파일입출력</Filter>
+    </ClCompile>
+    <ClCompile Include="SoundManager.cpp">
+      <Filter>2D FrameWork\FrameWorkManager</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

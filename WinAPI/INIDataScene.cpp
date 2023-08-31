@@ -19,7 +19,7 @@ void INIDataScene::update(void)
         INIDATA->addData("민우", "시리어스", "20");
         INIDATA->addData("기태", "민방위", "30");
         INIDATA->addData("호영", "군대", "40");
-                         //옵션, 밝기/사운드등등,  수치
+                         //옵션, 밝기/사운드등등,수치
 
         INIDATA->iniSave("100팀");
     }

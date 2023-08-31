@@ -32,8 +32,14 @@
 #pragma comment(linker,"/entry:WinMainCRTStartup /subsystem:console")  //?
 //라이브러리 추가
 #pragma comment (lib,"msimg32.lib")
+#pragma comment (lib,"lib/FMOD/fmodex_vc.lib")
 
-#include <Windows.h>
+
+
+#include <windows.h>
+
+//외부 해더
+#include "inc/FMOD/fmod.hpp"
 
 //! C런타임 헤더파일
 #include <stdlib.h> // C언어 표준 라이브러리 함수
@@ -140,6 +146,7 @@ ID2D1HwndRenderTarget* _ID2DRenderTarget = nullptr;
 #include "TimeManager.h"
 #include "SceneManager.h"
 #include "INIData.h"
+#include "SoundManager.h"
 using namespace MY_UTIL;
 
 // # 싱글톤 #
@@ -151,6 +158,7 @@ using namespace MY_UTIL;
 #define TIMEMANAGER TimeManager::getSingleton()
 #define SCENEMANAGER SceneManager::getSingleton()
 #define INIDATA INIData::getSingleton()
+#define SOUNDMANAGER SoundManager::getSingleton()
 
 //타이틀
 #define WINNAME		(LPTSTR)(TEXT("WindowsAPI"))
