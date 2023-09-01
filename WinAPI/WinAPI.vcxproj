@@ -72,6 +72,8 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\Users\언리얼\Desktop\수업내용\WinAPI\WinAPI\JsonCPP\include\json;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\언리얼\Desktop\수업내용\WinAPI\WinAPI\JsonCPP\lib_json;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
@@ -94,6 +96,7 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>json_vc71_libmtd.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -167,6 +170,7 @@
     <ClInclude Include="INIDataScene.h" />
     <ClInclude Include="INIData.h" />
     <ClInclude Include="IWindowsMessageHandler.h" />
+    <ClInclude Include="JsonSaveLoader.h" />
     <ClInclude Include="KeyManager.h" />
     <ClInclude Include="MainGame.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
@@ -227,6 +231,7 @@
     <ClCompile Include="INIDataScene.cpp" />
     <ClCompile Include="INIData.cpp" />
     <ClCompile Include="IWindowsMessageHandler.cpp" />
+    <ClCompile Include="JsonSaveLoader.cpp" />
     <ClCompile Include="KeyManager.cpp" />
     <ClCompile Include="MainGame.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
@@ -281,6 +286,10 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="TrigonoMetric Function\TrigonoMetric Function.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Character.json" />
+    <None Include="Quest.json" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

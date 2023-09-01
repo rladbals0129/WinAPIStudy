@@ -88,6 +88,12 @@
     <Filter Include="소스 파일\파일입출력">
       <UniqueIdentifier>{8c0ba427-9324-41c6-bf0f-78349a03d5a2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="2D FrameWork\Json">
+      <UniqueIdentifier>{8767699f-e7a9-4ea3-9ef3-213789f7270c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="2D FrameWork\Json\Schema">
+      <UniqueIdentifier>{824948ba-18ba-4b22-ae3c-7aa429313d50}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Resource.h">
@@ -222,6 +228,9 @@
     <ClInclude Include="SoundManager.h">
       <Filter>2D FrameWork\FrameWorkManager</Filter>
     </ClInclude>
+    <ClInclude Include="JsonSaveLoader.h">
+      <Filter>2D FrameWork\Json</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="WinAPI.cpp">
@@ -347,6 +356,9 @@
     <ClCompile Include="SoundManager.cpp">
       <Filter>2D FrameWork\FrameWorkManager</Filter>
     </ClCompile>
+    <ClCompile Include="JsonSaveLoader.cpp">
+      <Filter>2D FrameWork\Json</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="WinAPI.rc">
@@ -365,5 +377,13 @@
     <Text Include="TrigonoMetric Function\TrigonoMetric Function.txt">
       <Filter>소스 파일\ManagerClass\230621수</Filter>
     </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Quest.json">
+      <Filter>2D FrameWork\Json\Schema</Filter>
+    </None>
+    <None Include="Character.json">
+      <Filter>2D FrameWork\Json\Schema</Filter>
+    </None>
   </ItemGroup>
 </Project>

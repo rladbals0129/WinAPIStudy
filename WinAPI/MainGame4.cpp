@@ -66,6 +66,8 @@ HRESULT MainGame4::init(void)
 
 	*/
 	
+	//Json::Value;
+
 	return S_OK;
 }
 

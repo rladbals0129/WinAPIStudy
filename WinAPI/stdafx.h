@@ -34,12 +34,16 @@
 #pragma comment (lib,"msimg32.lib")
 #pragma comment (lib,"lib/FMOD/fmodex_vc.lib")
 
+#pragma comment (lib,"JsonCPP/lib_json/json_vc71_libmtd.lib")
+
 
 
 #include <windows.h>
 
 //외부 해더
 #include "inc/FMOD/fmod.hpp"
+#include "JsonCPP/include/json/json.h"
+
 
 //! C런타임 헤더파일
 #include <stdlib.h> // C언어 표준 라이브러리 함수
@@ -111,7 +115,9 @@ chrono
 // ㄴ 함수포인터->이벤트->트리거->델리게이트->액션트리거->관찰자패턴
 //우리도 쓰고있었다. 윈도우프로시저(콜백함수)
 #include <functional>
-
+#include <fstream>
+#include <queue>
+#include <deque>
 
 using namespace std;
 /*

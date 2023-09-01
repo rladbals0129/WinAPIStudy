@@ -114,7 +114,7 @@ private:
 	typedef map<string, Channel**>::iterator arrChannelIter;
 
 	System* _system;		//fmod 시스템 접근 허용하기때문에 *1개
-	Sound** _sound;			// 직접 접근이 안되기때문에 interface를 통해 접근 접근 하기위해 **
+	Sound** _sound;			// 직접 접근이 안되기때문에 interface를 통해 접근 접근 하기위해 ** (외부 라이브러리기떄문에 막아둠)
 	Channel** _channel;		//
 
 	arrSounds _mTotalSounds;
