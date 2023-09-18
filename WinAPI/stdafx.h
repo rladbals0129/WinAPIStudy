@@ -153,6 +153,8 @@ ID2D1HwndRenderTarget* _ID2DRenderTarget = nullptr;
 #include "SceneManager.h"
 #include "INIData.h"
 #include "SoundManager.h"
+#include "JsonSaveLoader.h"
+
 using namespace MY_UTIL;
 
 // # ΩÃ±€≈Ê #
@@ -165,6 +167,7 @@ using namespace MY_UTIL;
 #define SCENEMANAGER SceneManager::getSingleton()
 #define INIDATA INIData::getSingleton()
 #define SOUNDMANAGER SoundManager::getSingleton()
+#define JSONDATAMANAGER JsonSaveLoader::getSingleton()
 
 //≈∏¿Ã∆≤
 #define WINNAME		(LPTSTR)(TEXT("WindowsAPI"))

@@ -175,7 +175,7 @@ string JsonSaveLoader::loadStringWithFileStream(char* fileName)
 	*/
 
 
-
+	//cpu스캐줄링 상속관계? 검색
 	
 	char data;
 	string jsonStr;
@@ -217,8 +217,18 @@ Json::Value JsonSaveLoader::loadJsonFile(char* fileName)
 	bool parsingRet = reader.parse(jsonStr, root);
 	//							ㄴ parse: 파싱을 하는 프로세서
 
+	if (!parsingRet)
+	{
 
-	return Json::Value();
+		string errorMsg = reader.getFormatedErrorMessages();
+		MessageBox(_hWnd, errorMsg.c_str(), "오류", MB_OK);
+		PostQuitMessage(0); 
+		//극단적으로 메세지박스로 잡은 이유?? ->다른오류가 아닌json오류다. 라는걸 알리기이유
+		//외부 라이브러리기떄문에 우리 컴파일러가 오류를 잡을수있을지 모름
+	}
+
+
+	return root;
 
 	//파써?
 }

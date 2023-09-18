@@ -170,6 +170,7 @@
     <ClInclude Include="INIDataScene.h" />
     <ClInclude Include="INIData.h" />
     <ClInclude Include="IWindowsMessageHandler.h" />
+    <ClInclude Include="JsonDataScene.h" />
     <ClInclude Include="JsonSaveLoader.h" />
     <ClInclude Include="KeyManager.h" />
     <ClInclude Include="MainGame.h">
@@ -190,6 +191,8 @@
     <ClInclude Include="MainGame4.h" />
     <ClInclude Include="Minion.h" />
     <ClInclude Include="ProgressBar.h" />
+    <ClInclude Include="Quest.h" />
+    <ClInclude Include="QuestSample.h" />
     <ClInclude Include="RandomFunction.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="ResourceClass.h" />
@@ -231,6 +234,7 @@
     <ClCompile Include="INIDataScene.cpp" />
     <ClCompile Include="INIData.cpp" />
     <ClCompile Include="IWindowsMessageHandler.cpp" />
+    <ClCompile Include="JsonDataScene.cpp" />
     <ClCompile Include="JsonSaveLoader.cpp" />
     <ClCompile Include="KeyManager.cpp" />
     <ClCompile Include="MainGame.cpp">
@@ -251,6 +255,8 @@
     <ClCompile Include="MainGame4.cpp" />
     <ClCompile Include="Minion.cpp" />
     <ClCompile Include="ProgressBar.cpp" />
+    <ClCompile Include="Quest.cpp" />
+    <ClCompile Include="QuestSample.cpp" />
     <ClCompile Include="ResourceClass.cpp" />
     <ClCompile Include="Rocket.cpp" />
     <ClCompile Include="Scene.cpp" />

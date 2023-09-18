@@ -3,7 +3,7 @@
 #include "ShootingScene.h"
 #include "StartScene.h"
 #include "INIDataScene.h"
-
+#include "JsonDataScene.h"
 
 HRESULT MainGame4::init(void)
 {
@@ -11,10 +11,10 @@ HRESULT MainGame4::init(void)
 	SCENEMANAGER->addScene("슈팅", new ShootingScene);
 	SCENEMANAGER->addScene("시작", new StartScene);
 	//================================
+	SCENEMANAGER->addScene("제이슨", new JsonDataScene);
 
 
-
-	SCENEMANAGER->changeScene("시작");
+	SCENEMANAGER->changeScene("제이슨");
 	//asdasd
 	//_re.init(); //이미지 관리. 정적으로해준다 
 	

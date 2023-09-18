@@ -231,6 +231,15 @@
     <ClInclude Include="JsonSaveLoader.h">
       <Filter>2D FrameWork\Json</Filter>
     </ClInclude>
+    <ClInclude Include="Quest.h">
+      <Filter>2D FrameWork\Json\Schema</Filter>
+    </ClInclude>
+    <ClInclude Include="QuestSample.h">
+      <Filter>2D FrameWork\Json\Schema</Filter>
+    </ClInclude>
+    <ClInclude Include="JsonDataScene.h">
+      <Filter>2D FrameWork\Json\Schema</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="WinAPI.cpp">
@@ -358,6 +367,15 @@
     </ClCompile>
     <ClCompile Include="JsonSaveLoader.cpp">
       <Filter>2D FrameWork\Json</Filter>
+    </ClCompile>
+    <ClCompile Include="Quest.cpp">
+      <Filter>2D FrameWork\Json\Schema</Filter>
+    </ClCompile>
+    <ClCompile Include="QuestSample.cpp">
+      <Filter>2D FrameWork\Json\Schema</Filter>
+    </ClCompile>
+    <ClCompile Include="JsonDataScene.cpp">
+      <Filter>2D FrameWork\Json\Schema</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
